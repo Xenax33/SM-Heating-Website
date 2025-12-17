@@ -6,32 +6,32 @@ export default function Home() {
     {
       title: 'Boiler Installation',
       description: 'Expert installation of new boiler systems tailored to your home.',
-      icon: '🔧',
+      image: '/images/man-installs-heating-system-house-checks-pipes-with-wrench.jpg',
     },
     {
       title: 'Boiler Repair',
       description: 'Fast and reliable repair services for all boiler types.',
-      icon: '🛠️',
+      image: '/images/male-hands-with-wrench-turning-off-valves.jpg',
     },
     {
       title: 'Central Heating',
       description: 'Complete central heating maintenance and installation.',
-      icon: '🌡️',
+      image: '/images/man-electrical-technician-working-switchboard-with-fuses-uses-tablet.jpg',
     },
     {
       title: 'Boiler Servicing',
       description: 'Annual servicing to keep your system running efficiently.',
-      icon: '📋',
+      image: '/images/coworkers-servicing-hvac-system.jpg',
     },
     {
       title: 'Plumbing Services',
       description: 'Comprehensive plumbing solutions for all your needs.',
-      icon: '💧',
+      image: '/images/plumbing-professional-doing-his-job.jpg',
     },
     {
       title: 'Emergency Call-outs',
       description: '24/7 emergency response for urgent heating issues.',
-      icon: '🚨',
+      image: '/images/worker-repairing-water-heater.jpg',
     },
   ];
 
@@ -140,11 +140,53 @@ export default function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-lg p-8 card-hover"
+                className="group relative overflow-hidden rounded-xl shadow-lg card-hover"
+                style={{
+                  backgroundImage: `url(${service.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
               >
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                {/* Image with overlay */}
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={400}
+                  height={350}
+                  className="w-full h-80 object-cover"
+                />
+                
+                {/* Gradient overlays */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300"></div>
+                
+                {/* Accent border on hover */}
+                <div className="absolute inset-0 rounded-xl border-2 border-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                
+                {/* Number badge */}
+                <div className="absolute top-4 right-4 bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
+                  {index + 1}
+                </div>
+                
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-end p-6">
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:mb-3 transition-all duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-100 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0 transform">
+                    {service.description}
+                  </p>
+                  
+                  {/* Learn More Link */}
+                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0 transform">
+                    <Link 
+                      href="/services"
+                      className="inline-flex items-center text-red-400 hover:text-red-300 font-semibold text-sm transition-colors"
+                    >
+                      Learn More
+                      <span className="ml-2">→</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -172,10 +214,40 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((reason, index) => (
-              <div key={index} className="bg-blue-50 rounded-lg p-8 card-hover border border-blue-100">
-                <div className="text-5xl mb-4">{reason.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800">{reason.title}</h3>
-                <p className="text-gray-600">{reason.description}</p>
+              <div 
+                key={index} 
+                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl overflow-hidden border border-gray-100 card-hover hover:border-red-200 shadow-md hover:shadow-2xl transition-all duration-300"
+              >
+                {/* Animated gradient background on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-red-50/0 to-blue-50/0 group-hover:from-red-50 group-hover:to-blue-50 transition-all duration-500 pointer-events-none"></div>
+                
+                {/* Accent line at top */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-red-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                {/* Number circle */}
+                <div className="absolute -top-3 -right-3 w-16 h-16 bg-red-600 rounded-full flex items-center justify-center font-bold text-white text-lg shadow-lg group-hover:scale-110 transition-transform duration-300 origin-center">
+                  {index + 1}
+                </div>
+                
+                {/* Content */}
+                <div className="relative p-8">
+                  <div className="mb-6">
+                    <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                      {reason.icon}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-red-600 transition-colors duration-300">
+                    {reason.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                    {reason.description}
+                  </p>
+                  
+                  {/* Hover indicator line */}
+                  <div className="mt-4 h-1 w-0 bg-gradient-to-r from-red-600 to-blue-600 group-hover:w-12 transition-all duration-500"></div>
+                </div>
               </div>
             ))}
           </div>

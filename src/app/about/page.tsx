@@ -139,77 +139,53 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-12 text-center">Why Choose Us?</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <p className="text-4xl">👨‍🔧</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Expert Team</h3>
-                <p className="text-gray-600">
-                  Our technicians are fully certified with extensive experience across all boiler types and heating systems.
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">👨‍🔧</div>
+              <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-red-600 transition-colors">Expert Team</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Our technicians are fully certified with extensive experience across all boiler types and heating systems.
+              </p>
             </div>
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <p className="text-4xl">🚀</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Fast Response</h3>
-                <p className="text-gray-600">
-                  We understand that heating emergencies can't wait. Our team responds quickly to get you back on track.
-                </p>
-              </div>
+            <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🚀</div>
+              <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-red-600 transition-colors">Fast Response</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We understand that heating emergencies can't wait. Our team responds quickly to get you back on track.
+              </p>
             </div>
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <p className="text-4xl">✅</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Guaranteed Work</h3>
-                <p className="text-gray-600">
-                  Every job comes with our comprehensive warranty and satisfaction guarantee for complete peace of mind.
-                </p>
-              </div>
+            <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">✅</div>
+              <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-red-600 transition-colors">Guaranteed Work</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Every job comes with our comprehensive warranty and satisfaction guarantee for complete peace of mind.
+              </p>
             </div>
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <p className="text-4xl">💰</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Competitive Pricing</h3>
-                <p className="text-gray-600">
-                  Transparent, competitive rates with no hidden charges. We offer the best value for quality work.
-                </p>
-              </div>
+            <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">💰</div>
+              <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-red-600 transition-colors">Competitive Pricing</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Transparent, competitive rates with no hidden charges. We offer the best value for quality work.
+              </p>
             </div>
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <p className="text-4xl">🗺️</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Local Knowledge</h3>
-                <p className="text-gray-600">
-                  As a local business, we understand regional heating challenges and climate considerations.
-                </p>
-              </div>
+            <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🗺️</div>
+              <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-red-600 transition-colors">Local Knowledge</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                As a local business, we understand regional heating challenges and climate considerations.
+              </p>
             </div>
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <p className="text-4xl">🏆</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Trusted Partner</h3>
-                <p className="text-gray-600">
-                  Thousands of satisfied customers have trusted us with their most important systems.
-                </p>
-              </div>
+            <div className="group bg-white rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🏆</div>
+              <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-red-600 transition-colors">Trusted Partner</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Thousands of satisfied customers have trusted us with their most important systems.
+              </p>
             </div>
           </div>
         </div>
@@ -222,13 +198,13 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-            <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100 card-hover overflow-hidden">
-                <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-red-50 to-blue-50 rounded-full flex items-center justify-center border border-blue-100 overflow-hidden">
-                  <p className="text-5xl">👤</p>
+            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300 overflow-hidden text-center">
+                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-red-100 to-blue-100 rounded-full flex items-center justify-center border-2 border-red-200 overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                  <p className="text-4xl">👤</p>
                 </div>
-                <h3 className="text-xl font-bold mb-1 text-center">{member.name}</h3>
-                <p className="text-red-600 font-semibold mb-3 text-center text-sm">{member.role}</p>
-                <p className="text-gray-600 text-sm text-center">{member.bio}</p>
+                <h3 className="text-lg font-bold mb-1 text-gray-900 group-hover:text-red-600 transition-colors">{member.name}</h3>
+                <p className="text-red-600 font-semibold mb-3 text-xs uppercase tracking-wide">{member.role}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
               </div>
             ))}
           </div>
