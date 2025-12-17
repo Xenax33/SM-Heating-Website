@@ -103,7 +103,7 @@ export default function ContactForm() {
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700 ${
+            className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 ${
               errors.fullName ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="John Doe"
@@ -124,7 +124,7 @@ export default function ContactForm() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700 ${
+            className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 ${
               errors.email ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="john@example.com"
@@ -145,7 +145,7 @@ export default function ContactForm() {
             name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700 ${
+            className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 ${
               errors.phoneNumber ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="+44 (0) 123 456 7890"
@@ -166,7 +166,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             rows={6}
-            className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700 resize-none ${
+            className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 resize-none ${
               errors.message ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Tell us about your heating or plumbing needs..."
@@ -179,7 +179,7 @@ export default function ContactForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-red-700 text-white font-bold py-3 rounded-lg hover:bg-red-800 transition-colors"
+          className="w-full bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition-colors"
         >
           Send Message
         </button>

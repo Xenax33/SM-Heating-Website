@@ -91,10 +91,10 @@ export default function Services() {
   return (
     <div className="min-h-screen">
       {/* Page Header */}
-      <section className="bg-gradient-to-r from-red-700 via-red-600 to-blue-700 text-white py-16 md:py-24">
+      <section className="bg-gradient-to-r from-red-50 to-blue-50 text-gray-800 py-16 md:py-24 border-b-2 border-red-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
-          <p className="text-lg text-red-50 max-w-2xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Our Services</h1>
+          <p className="text-lg text-gray-600 max-w-2xl">
             Comprehensive heating and plumbing solutions designed to keep your home comfortable and safe year-round.
           </p>
         </div>
@@ -120,14 +120,14 @@ export default function Services() {
                   <div className="space-y-3 mb-8">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-3">
-                        <span className="text-red-700 font-bold mt-1">✓</span>
+                        <span className="text-red-600 font-bold mt-1">✓</span>
                         <span className="text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>
                   <Link
                     href="/contact"
-                    className="bg-red-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-800 transition-colors inline-block"
+                    className="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block"
                   >
                     Get Started
                   </Link>
@@ -135,7 +135,7 @@ export default function Services() {
 
                 {/* Image/Icon area */}
                 <div className={index % 2 === 1 ? 'md:order-1' : ''}>
-                  <div className="bg-gradient-to-br from-red-100 to-blue-50 rounded-lg h-72 flex items-center justify-center">
+                  <div className="bg-gradient-to-br from-red-50 to-blue-50 rounded-lg h-72 flex items-center justify-center border border-red-100">
                     <div className="text-center">
                       <p className="text-8xl mb-4">{service.icon}</p>
                     </div>
@@ -148,24 +148,24 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-900 text-white py-16">
+      <section className="bg-gradient-to-r from-red-100 to-blue-100 text-gray-800 py-16 border-t-2 border-red-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
             Ready to Get Your Heating Fixed?
           </h2>
-          <p className="text-lg mb-8 text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg mb-8 text-gray-600 max-w-2xl mx-auto">
             Contact our team today for a free consultation. We're ready to help with all your heating and plumbing needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-red-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-800 transition-colors text-center"
+              className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors text-center"
             >
               Get a Free Quote
             </Link>
             <a
               href="tel:+441234567890"
-              className="border-2 border-red-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors text-center"
+              className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-bold hover:bg-red-50 transition-colors text-center"
             >
               Call Now
             </a>

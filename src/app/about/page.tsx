@@ -33,10 +33,10 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Page Header */}
-      <section className="bg-gradient-to-r from-red-700 via-red-600 to-blue-700 text-white py-16 md:py-24">
+      <section className="bg-gradient-to-r from-red-50 to-blue-50 text-gray-800 py-16 md:py-24 border-b-2 border-red-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About SM Heating & Plumbing</h1>
-          <p className="text-lg text-red-50 max-w-2xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">About SM Heating & Plumbing</h1>
+          <p className="text-lg text-gray-600 max-w-2xl">
             Your trusted local partner for professional heating and plumbing solutions.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function About() {
                 We believe that every customer deserves transparent pricing, expert advice, and work that stands the test of time. That's the SM Heating & Plumbing difference.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-red-100 to-blue-50 rounded-lg h-96 flex items-center justify-center">
+            <div className="bg-gradient-to-br from-red-50 to-blue-50 rounded-lg h-96 flex items-center justify-center border border-red-100">
               <div className="text-center">
                 <p className="text-8xl mb-4">🏢</p>
                 <p className="text-xl font-semibold text-gray-700">Established 2010</p>
@@ -69,59 +69,59 @@ export default function About() {
       </section>
 
       {/* Mission & Values */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Mission & Values</h2>
+            <h2 className="text-4xl font-bold mb-4 text-gray-800">Our Mission & Values</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               We're committed to providing heating and plumbing solutions that exceed expectations.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-md">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
               <div className="text-5xl mb-4">🎯</div>
-              <h3 className="text-2xl font-bold mb-3">Our Mission</h3>
+              <h3 className="text-2xl font-bold mb-3 text-gray-800">Our Mission</h3>
               <p className="text-gray-600">
                 To deliver reliable, professional heating and plumbing services that keep families warm, safe, and comfortable throughout the year.
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-md">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
               <div className="text-5xl mb-4">💯</div>
-              <h3 className="text-2xl font-bold mb-3">Quality</h3>
+              <h3 className="text-2xl font-bold mb-3 text-gray-800">Quality</h3>
               <p className="text-gray-600">
                 We use only quality materials and employ certified technicians. Every job receives the same high standard of workmanship.
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-md">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
               <div className="text-5xl mb-4">🤝</div>
-              <h3 className="text-2xl font-bold mb-3">Customer Care</h3>
+              <h3 className="text-2xl font-bold mb-3 text-gray-800">Customer Care</h3>
               <p className="text-gray-600">
                 Your satisfaction is our priority. We listen to your needs and provide honest advice tailored to your situation.
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-md">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
               <div className="text-5xl mb-4">⏰</div>
-              <h3 className="text-2xl font-bold mb-3">Reliability</h3>
+              <h3 className="text-2xl font-bold mb-3 text-gray-800">Reliability</h3>
               <p className="text-gray-600">
                 When we promise a time, we show up. When we commit to a solution, we deliver. You can count on us.
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-md">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
               <div className="text-5xl mb-4">💷</div>
-              <h3 className="text-2xl font-bold mb-3">Transparency</h3>
+              <h3 className="text-2xl font-bold mb-3 text-gray-800">Transparency</h3>
               <p className="text-gray-600">
                 Clear pricing, honest assessments, and no hidden charges. We believe in building trust through transparency.
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-md">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
               <div className="text-5xl mb-4">🌱</div>
-              <h3 className="text-2xl font-bold mb-3">Innovation</h3>
+              <h3 className="text-2xl font-bold mb-3 text-gray-800">Innovation</h3>
               <p className="text-gray-600">
                 We stay current with modern heating technology and energy-efficient solutions to benefit our customers.
               </p>
@@ -212,14 +212,14 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-12 text-center">Meet Our Team</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center text-gray-800">Meet Our Team</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-            <div className="bg-white rounded-lg p-6 shadow-md text-center">
-                <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-red-100 to-blue-50 rounded-full flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+                <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-red-50 to-blue-50 rounded-full flex items-center justify-center border border-blue-100">
                   <p className="text-5xl">👤</p>
                 </div>
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
@@ -232,24 +232,24 @@ export default function About() {
       </section>
 
       {/* Experience Stats */}
-      <section className="bg-gradient-to-r from-red-700 to-blue-700 text-white py-16">
+      <section className="bg-gradient-to-r from-red-100 to-blue-100 text-gray-800 py-16 border-t-2 border-b-2 border-red-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-5xl font-bold mb-2">15+</p>
-              <p className="text-lg">Years Experience</p>
+              <p className="text-5xl font-bold text-red-600 mb-2">15+</p>
+              <p className="text-lg text-gray-700">Years Experience</p>
             </div>
             <div>
-              <p className="text-5xl font-bold mb-2">2000+</p>
-              <p className="text-lg">Homes Served</p>
+              <p className="text-5xl font-bold text-red-600 mb-2">2000+</p>
+              <p className="text-lg text-gray-700">Homes Served</p>
             </div>
             <div>
-              <p className="text-5xl font-bold mb-2">10000+</p>
-              <p className="text-lg">Jobs Completed</p>
+              <p className="text-5xl font-bold text-red-600 mb-2">10000+</p>
+              <p className="text-lg text-gray-700">Jobs Completed</p>
             </div>
             <div>
-              <p className="text-5xl font-bold mb-2">98%</p>
-              <p className="text-lg">Customer Satisfaction</p>
+              <p className="text-5xl font-bold text-red-600 mb-2">98%</p>
+              <p className="text-lg text-gray-700">Customer Satisfaction</p>
             </div>
           </div>
         </div>
@@ -266,7 +266,7 @@ export default function About() {
           </p>
           <Link
             href="/contact"
-            className="bg-red-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-800 transition-colors inline-block"
+            className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block"
           >
             Get in Touch
           </Link>

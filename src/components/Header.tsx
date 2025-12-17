@@ -15,7 +15,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md border-b-4 border-blue-700">
+    <header className="sticky top-0 z-50 bg-white shadow-sm border-b-2 border-blue-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -27,7 +27,7 @@ export default function Header() {
               height={40}
               className="h-10 w-auto"
             />
-            <span className="hidden sm:block font-bold text-lg text-gray-900">
+            <span className="hidden sm:block font-bold text-lg text-gray-800">
               SM Heating & Plumbing
             </span>
           </Link>
@@ -38,7 +38,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-red-700 font-medium transition-colors"
+                className="text-gray-600 hover:text-red-600 font-medium transition-colors"
               >
                 {link.label}
               </Link>
@@ -48,7 +48,7 @@ export default function Header() {
           {/* CTA Button - Desktop */}
           <Link
             href="/contact"
-            className="hidden md:block bg-red-700 text-white px-6 py-2 rounded-lg hover:bg-red-800 font-medium transition-colors"
+            className="hidden md:block bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 font-medium transition-colors"
           >
             Contact Us
           </Link>
@@ -72,7 +72,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-red-700 font-medium transition-colors py-2"
+                className="text-gray-600 hover:text-red-600 font-medium transition-colors py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
@@ -80,7 +80,7 @@ export default function Header() {
             ))}
             <Link
               href="/contact"
-              className="bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 font-medium transition-colors text-center"
+              className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 font-medium transition-colors text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact Us

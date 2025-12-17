@@ -11,10 +11,10 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Page Header */}
-      <section className="bg-gradient-to-r from-red-700 via-red-600 to-blue-700 text-white py-16 md:py-24">
+      <section className="bg-gradient-to-r from-red-50 to-blue-50 text-gray-800 py-16 md:py-24 border-b-2 border-red-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-lg text-red-50 max-w-2xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Contact Us</h1>
+          <p className="text-lg text-gray-600 max-w-2xl">
             Get in touch with our team. We're ready to help with your heating and plumbing needs.
           </p>
         </div>
@@ -30,11 +30,11 @@ export default function Contact() {
 
               {/* Phone */}
               <div className="mb-8">
-                <h3 className="text-xl font-bold mb-2">📞 Phone</h3>
+                <h3 className="text-xl font-bold mb-2 text-gray-800">📞 Phone</h3>
                 <p className="text-gray-600 mb-2">Available 24/7 for emergencies</p>
                 <a
                   href="tel:+441234567890"
-                  className="text-red-700 font-bold text-lg hover:text-red-800"
+                  className="text-red-600 font-bold text-lg hover:text-red-700"
                 >
                   +44 (0) 123 456 7890
                 </a>
@@ -42,11 +42,11 @@ export default function Contact() {
 
               {/* Email */}
               <div className="mb-8">
-                <h3 className="text-xl font-bold mb-2">✉️ Email</h3>
+                <h3 className="text-xl font-bold mb-2 text-gray-800">✉️ Email</h3>
                 <p className="text-gray-600 mb-2">We'll respond within 24 hours</p>
                 <a
                   href="mailto:info@smheating.co.uk"
-                  className="text-red-700 font-bold hover:text-red-800"
+                  className="text-red-600 font-bold hover:text-red-700"
                 >
                   info@smheating.co.uk
                 </a>
@@ -74,8 +74,8 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-2 bg-gray-50 rounded-lg p-8">
-              <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+            <div className="lg:col-span-2 bg-blue-50 rounded-lg p-8 border border-blue-100">
+              <h2 className="text-2xl font-bold mb-6 text-gray-800">Send us a Message</h2>
               <ContactForm />
             </div>
           </div>
@@ -83,9 +83,9 @@ export default function Contact() {
       </section>
 
       {/* Service Areas */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-12 text-center">We Serve Across the UK</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center text-gray-800">We Serve Across the UK</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Whether you're in a major city or a remote rural area, SM Heating & Plumbing provides professional service with the same commitment to excellence.
           </p>
@@ -107,7 +107,7 @@ export default function Contact() {
             ].map((city, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-lg p-4 text-center hover:border-red-600 hover:shadow-md transition-all"
+                className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center hover:border-red-300 hover:shadow-md transition-all"
               >
                 <p className="font-semibold text-gray-800">{city}</p>
               </div>
@@ -172,17 +172,17 @@ export default function Contact() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-gradient-to-r from-red-700 to-blue-700 text-white py-16">
+      <section className="bg-gradient-to-r from-red-100 to-blue-100 text-gray-800 py-16 border-t-2 border-red-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
             Ready to Get Started?
           </h2>
-          <p className="text-lg mb-8 text-red-50">
+          <p className="text-lg mb-8 text-gray-600">
             Fill out the form above or give us a call for immediate assistance.
           </p>
           <a
             href="tel:+441234567890"
-            className="bg-white text-red-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-block"
+            className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block"
           >
             Call Now: +44 (0) 123 456 7890
           </a>
