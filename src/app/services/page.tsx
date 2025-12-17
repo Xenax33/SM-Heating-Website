@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Services | SM Heating & Plumbing',
@@ -20,6 +21,7 @@ export default function Services() {
         'Efficiency optimization and performance testing',
         'Warranty and after-sales support',
       ],
+      image: '/images/man-installs-heating-system-house-checks-pipes-with-wrench.jpg',
     },
     {
       id: 'boiler-repair',
@@ -33,6 +35,7 @@ export default function Services() {
         'All boiler types and brands supported',
         'Quality parts and professional workmanship',
       ],
+      image: '/images/male-hands-with-wrench-turning-off-valves.jpg',
     },
     {
       id: 'boiler-servicing',
@@ -46,6 +49,7 @@ export default function Services() {
         'Component cleaning and adjustment',
         'Safety certificate and documentation',
       ],
+      image: '/images/coworkers-servicing-hvac-system.jpg',
     },
     {
       id: 'central-heating',
@@ -59,6 +63,7 @@ export default function Services() {
         'Pressure and temperature optimization',
         'System flushing and updates',
       ],
+      image: '/images/man-electrical-technician-working-switchboard-with-fuses-uses-tablet.jpg',
     },
     {
       id: 'plumbing',
@@ -72,6 +77,7 @@ export default function Services() {
         'Fixture installation and replacement',
         'Water system maintenance',
       ],
+      image: '/images/plumbing-professional-doing-his-job.jpg',
     },
     {
       id: 'emergency',
@@ -85,6 +91,7 @@ export default function Services() {
         'Expert problem solving',
         'Transparent emergency pricing',
       ],
+      image: '/images/worker-repairing-water-heater.jpg',
     },
   ];
 
@@ -125,20 +132,18 @@ export default function Services() {
                       </div>
                     ))}
                   </div>
-                  <Link
-                    href="/contact"
-                    className="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block"
-                  >
-                    Get Started
-                  </Link>
                 </div>
 
                 {/* Image/Icon area */}
                 <div className={index % 2 === 1 ? 'md:order-1' : ''}>
-                  <div className="bg-gradient-to-br from-red-50 to-blue-50 rounded-lg h-72 flex items-center justify-center border border-red-100">
-                    <div className="text-center">
-                      <p className="text-8xl mb-4">{service.icon}</p>
-                    </div>
+                  <div className="rounded-lg h-72 flex items-center justify-center border-2 border-red-100 overflow-hidden shadow-lg image-hover bg-white">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={400}
+                      height={300}
+                      className="object-cover w-full h-full"
+                    />
                   </div>
                 </div>
               </div>

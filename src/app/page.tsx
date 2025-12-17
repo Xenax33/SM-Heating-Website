@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   const services = [
@@ -110,11 +111,15 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="bg-gradient-to-br from-red-100 to-blue-100 rounded-lg h-96 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-6xl mb-4">🔥</p>
-                  <p className="text-xl font-semibold text-gray-700">Professional Heating Solutions</p>
-                </div>
+              <div className="bg-gradient-to-br from-red-100 to-blue-100 rounded-lg h-96 flex items-center justify-center overflow-hidden shadow-2xl image-hover">
+                <Image
+                  src="/images/coworkers-servicing-hvac-system.jpg"
+                  alt="Professional heating solutions"
+                  width={500}
+                  height={400}
+                  className="object-cover w-full h-full"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -135,7 +140,7 @@ export default function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-lg p-8 hover:border-red-300 hover:shadow-md transition-all"
+                className="bg-white border border-gray-200 rounded-lg p-8 card-hover"
               >
                 <div className="text-5xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-3 text-gray-800">{service.title}</h3>
@@ -167,7 +172,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((reason, index) => (
-              <div key={index} className="bg-blue-50 rounded-lg p-8 hover:shadow-md transition-shadow border border-blue-100">
+              <div key={index} className="bg-blue-50 rounded-lg p-8 card-hover border border-blue-100">
                 <div className="text-5xl mb-4">{reason.icon}</div>
                 <h3 className="text-xl font-bold mb-3 text-gray-800">{reason.title}</h3>
                 <p className="text-gray-600">{reason.description}</p>

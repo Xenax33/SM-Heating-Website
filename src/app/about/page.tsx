@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About Us | SM Heating & Plumbing',
@@ -58,11 +59,14 @@ export default function About() {
                 We believe that every customer deserves transparent pricing, expert advice, and work that stands the test of time. That's the SM Heating & Plumbing difference.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-red-50 to-blue-50 rounded-lg h-96 flex items-center justify-center border border-red-100">
-              <div className="text-center">
-                <p className="text-8xl mb-4">🏢</p>
-                <p className="text-xl font-semibold text-gray-700">Established 2010</p>
-              </div>
+            <div className="bg-gradient-to-br from-red-50 to-blue-50 rounded-lg h-96 flex items-center justify-center border border-red-100 overflow-hidden shadow-lg image-hover">
+              <Image
+                src="/images/coworkers-servicing-hvac-system.jpg"
+                alt="Company team"
+                width={400}
+                height={300}
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
         </div>
@@ -79,7 +83,7 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100 card-hover">
               <div className="text-5xl mb-4">🎯</div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">Our Mission</h3>
               <p className="text-gray-600">
@@ -87,7 +91,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100 card-hover">
               <div className="text-5xl mb-4">💯</div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">Quality</h3>
               <p className="text-gray-600">
@@ -95,7 +99,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100 card-hover">
               <div className="text-5xl mb-4">🤝</div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">Customer Care</h3>
               <p className="text-gray-600">
@@ -103,7 +107,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100 card-hover">
               <div className="text-5xl mb-4">⏰</div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">Reliability</h3>
               <p className="text-gray-600">
@@ -111,7 +115,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100 card-hover">
               <div className="text-5xl mb-4">💷</div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">Transparency</h3>
               <p className="text-gray-600">
@@ -119,7 +123,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+            <div className="bg-blue-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-blue-100 card-hover">
               <div className="text-5xl mb-4">🌱</div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">Innovation</h3>
               <p className="text-gray-600">
@@ -218,13 +222,13 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-            <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
-                <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-red-50 to-blue-50 rounded-full flex items-center justify-center border border-blue-100">
+            <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100 card-hover overflow-hidden">
+                <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-red-50 to-blue-50 rounded-full flex items-center justify-center border border-blue-100 overflow-hidden">
                   <p className="text-5xl">👤</p>
                 </div>
-                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-red-600 font-semibold mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm">{member.bio}</p>
+                <h3 className="text-xl font-bold mb-1 text-center">{member.name}</h3>
+                <p className="text-red-600 font-semibold mb-3 text-center text-sm">{member.role}</p>
+                <p className="text-gray-600 text-sm text-center">{member.bio}</p>
               </div>
             ))}
           </div>
