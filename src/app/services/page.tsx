@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Services | SM Heating & Plumbing',
-  description: 'Boiler installation, repair, servicing, central heating, plumbing, and 24/7 emergency call-outs.',
+  description: 'Boiler installation, repair, servicing, central heating, plumbing, appliance repair, and 24/7 emergency call-outs.',
 };
 
 export default function Services() {
@@ -20,7 +20,7 @@ export default function Services() {
         'Efficiency optimization and performance testing',
         'Warranty and after-sales support',
       ],
-      image: '/images/man-installs-heating-system-house-checks-pipes-with-wrench.jpg',
+      image: '/images/boiler-heating-system.jpg',
     },
     {
       id: 'boiler-repair',
@@ -33,7 +33,7 @@ export default function Services() {
         'All boiler types and brands supported',
         'Quality parts and professional workmanship',
       ],
-      image: '/images/male-hands-with-wrench-turning-off-valves.jpg',
+      image: '/images/boiler-repair.jpeg',
     },
     {
       id: 'boiler-servicing',
@@ -46,7 +46,7 @@ export default function Services() {
         'Component cleaning and adjustment',
         'Safety certificate and documentation',
       ],
-      image: '/images/coworkers-servicing-hvac-system.jpg',
+      image: '/images/boiler-services.jpeg',
     },
     {
       id: 'central-heating',
@@ -59,7 +59,7 @@ export default function Services() {
         'Pressure and temperature optimization',
         'System flushing and updates',
       ],
-      image: '/images/man-electrical-technician-working-switchboard-with-fuses-uses-tablet.jpg',
+      image: '/images/central-heating.jpeg',
     },
     {
       id: 'plumbing',
@@ -86,6 +86,19 @@ export default function Services() {
         'Transparent emergency pricing',
       ],
       image: '/images/worker-repairing-water-heater.jpg',
+    },
+    {
+      id: 'appliance-repair',
+      title: 'Appliance Repair & Maintenance',
+      description:
+        'Beyond heating and plumbing, we provide comprehensive repair and maintenance services for your home appliances. From refrigerators and freezers to washing machines, dishwashers, and electric heaters, our skilled technicians can diagnose and fix issues quickly, extending the lifespan of your appliances.',
+      features: [
+        'Refrigerator and freezer repairs',
+        'Washing machine and dryer servicing',
+        'Dishwasher repairs and maintenance',
+        'Electric heater and appliance troubleshooting',
+      ],
+      image: '/images/high-angle-man-working-as-plumber.jpg',
     },
   ];
 

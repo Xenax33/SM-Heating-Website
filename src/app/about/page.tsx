@@ -61,7 +61,7 @@ export default function About() {
             </div>
             <div className="bg-gradient-to-br from-red-50 to-blue-50 rounded-lg h-96 flex items-center justify-center border border-red-100 overflow-hidden shadow-lg image-hover">
               <Image
-                src="/images/coworkers-servicing-hvac-system.jpg"
+                src="/images/boiler-heating-system.jpg"
                 alt="Company team"
                 width={400}
                 height={300}
@@ -198,7 +198,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300 overflow-hidden text-center">
+            <div key={member.name} className="group bg-gradient-to-br from-white to-gray-50 rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300 overflow-hidden text-center">
                 <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-red-100 to-blue-100 rounded-full flex items-center justify-center border-2 border-red-200 overflow-hidden group-hover:scale-110 transition-transform duration-300">
                   <p className="text-4xl">👤</p>
                 </div>

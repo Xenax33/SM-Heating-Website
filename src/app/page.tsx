@@ -6,22 +6,22 @@ export default function Home() {
     {
       title: 'Boiler Installation',
       description: 'Expert installation of new boiler systems tailored to your home.',
-      image: '/images/man-installs-heating-system-house-checks-pipes-with-wrench.jpg',
+      image: '/images/boiler-heating-system.jpg',
     },
     {
       title: 'Boiler Repair',
       description: 'Fast and reliable repair services for all boiler types.',
-      image: '/images/male-hands-with-wrench-turning-off-valves.jpg',
+      image: '/images/boiler-repair.jpeg',
     },
     {
       title: 'Central Heating',
       description: 'Complete central heating maintenance and installation.',
-      image: '/images/man-electrical-technician-working-switchboard-with-fuses-uses-tablet.jpg',
+      image: '/images/central-heating.jpeg',
     },
     {
       title: 'Boiler Servicing',
       description: 'Annual servicing to keep your system running efficiently.',
-      image: '/images/coworkers-servicing-hvac-system.jpg',
+      image: '/images/boiler-services.jpeg',
     },
     {
       title: 'Plumbing Services',
@@ -32,6 +32,11 @@ export default function Home() {
       title: 'Emergency Call-outs',
       description: '24/7 emergency response for urgent heating issues.',
       image: '/images/worker-repairing-water-heater.jpg',
+    },
+    {
+      title: 'Appliance Repair & Maintenance',
+      description: 'Professional repair and maintenance for home appliances including fridges, washing machines, and more.',
+      image: '/images/high-angle-man-working-as-plumber.jpg',
     },
   ];
 
@@ -76,7 +81,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-800">
-                Professional Heating & Plumbing Services
+                <span className="text-red-600">SM</span> Heating & Plumbing Services
               </h1>
               <p className="text-lg mb-8 text-gray-600">
                 Trusted by homeowners across the UK. Expert boiler installation, repair, and servicing with 24/7 emergency support.
@@ -113,7 +118,7 @@ export default function Home() {
             <div className="hidden md:block">
               <div className="bg-gradient-to-br from-red-100 to-blue-100 rounded-lg h-96 flex items-center justify-center overflow-hidden shadow-2xl image-hover">
                 <Image
-                  src="/images/coworkers-servicing-hvac-system.jpg"
+                  src="/images/boiler-heating-system.jpg"
                   alt="Professional heating solutions"
                   width={500}
                   height={400}
@@ -140,7 +145,9 @@ export default function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg card-hover"
+                className={`group relative overflow-hidden rounded-xl shadow-lg card-hover ${
+                  index === services.length - 1 ? 'lg:col-span-3' : ''
+                }`}
                 style={{
                   backgroundImage: `url(${service.image})`,
                   backgroundSize: 'cover',
