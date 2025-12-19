@@ -37,8 +37,11 @@ export default function About() {
       <section className="bg-gradient-to-r from-red-50 to-blue-50 text-gray-800 py-16 md:py-24 border-b-2 border-red-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">About SM Heating & Plumbing</h1>
-          <p className="text-lg text-gray-600 max-w-2xl">
+          <p className="text-lg text-gray-600 max-w-2xl mb-4">
             Your trusted local partner for professional heating and plumbing solutions.
+          </p>
+          <p className="text-base text-gray-600">
+            Areas we cover include <span className="font-semibold">Glasgow, Hamilton, Paisley, Wishaw, Lanark, Glasgow East, Glasgow West, Motherwell, Strathblane, Coatbridge, Chryston, East Kilbride, Giffnock,</span> and many other areas. We are your expert local Glasgow heating and plumbing specialists.
           </p>
         </div>
       </section>
@@ -129,6 +132,49 @@ export default function About() {
               <p className="text-gray-600">
                 We stay current with modern heating technology and energy-efficient solutions to benefit our customers.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gas Safe Register Certification */}
+      <section className="py-20 bg-gradient-to-r from-green-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold mb-6 text-gray-800">Gas Safe Registered</h2>
+              <p className="text-lg text-gray-600 mb-4">
+                Your safety is our top priority. SM Heating & Plumbing is Gas Safe registered, ensuring all our work meets the highest industry standards and regulations.
+              </p>
+              <p className="text-gray-600 mb-6">
+                Every member of our technical team holds current Gas Safe certification. We undergo regular inspections and audits to maintain our registration and guarantee that all heating work is performed safely and to code.
+              </p>
+              <div className="flex gap-4">
+                <div className="text-green-600 font-bold text-lg">✓</div>
+                <p className="text-gray-700"><span className="font-semibold">Gas Safe Registered Engineers</span> – All work complies with safety regulations</p>
+              </div>
+              <div className="flex gap-4 mt-4">
+                <div className="text-green-600 font-bold text-lg">✓</div>
+                <p className="text-gray-700"><span className="font-semibold">Regular Audits</span> – Our registration is actively maintained and verified</p>
+              </div>
+              <div className="flex gap-4 mt-4">
+                <div className="text-green-600 font-bold text-lg">✓</div>
+                <p className="text-gray-700"><span className="font-semibold">Complete Peace of Mind</span> – Work covered by our comprehensive warranty</p>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="bg-white rounded-lg p-8 shadow-lg border border-green-100 hover:shadow-xl transition-shadow">
+                <Image
+                  src="/images/gas-safe-register.jpeg"
+                  alt="Gas Safe Register Certification"
+                  width={300}
+                  height={300}
+                  className="object-contain"
+                />
+                <p className="text-center text-sm text-gray-600 mt-4">
+                  Certified and trusted by Gas Safe Register
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -85,25 +85,26 @@ export default function Contact() {
       {/* Service Areas */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-12 text-center text-gray-800">We Serve Across the UK</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center text-gray-800">Areas We Cover</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Whether you're in a major city or a remote rural area, SM Heating & Plumbing provides professional service with the same commitment to excellence.
+            We are your expert local Glasgow and surrounding areas specialists. Our team provides professional service with the same commitment to excellence throughout our service regions.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              'London',
-              'Manchester',
-              'Birmingham',
-              'Leeds',
               'Glasgow',
-              'Sheffield',
-              'Bristol',
-              'Edinburgh',
-              'Liverpool',
-              'Newcastle',
-              'Nottingham',
-              'Leicester',
+              'Hamilton',
+              'Paisley',
+              'Wishaw',
+              'Lanark',
+              'Glasgow East',
+              'Glasgow West',
+              'Motherwell',
+              'Strathblane',
+              'Coatbridge',
+              'Chryston',
+              'East Kilbride',
+              'Giffnock',
             ].map((city, index) => (
               <div
                 key={index}
@@ -115,7 +116,7 @@ export default function Contact() {
           </div>
 
           <p className="text-center text-gray-600 mt-8">
-            Not listed? Contact us anyway – we may be able to help or recommend a trusted partner in your area.
+            Looking for service in another area? Contact us anyway – we may be able to help or recommend a trusted partner in your location.
           </p>
         </div>
       </section>
@@ -143,7 +144,7 @@ export default function Contact() {
             <div className="border border-gray-200 rounded-lg p-6">
               <h3 className="text-lg font-bold mb-2">Are you certified and insured?</h3>
               <p className="text-gray-600">
-                Yes. All our technicians are Gas Safe registered and our work is fully insured. We're proud members of industry associations.
+                Yes. All our technicians are <span className="font-semibold text-green-600">Gas Safe registered</span> and our work is fully insured. We're proud members of industry associations and maintain the highest safety and professional standards.
               </p>
             </div>
 

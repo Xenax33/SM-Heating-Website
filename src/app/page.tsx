@@ -81,7 +81,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-800">
-                <span className="text-red-600">SM</span> Heating & Plumbing Services
+                <span className="text-red-600">SM</span> Professional Heating & Plumbing Services
               </h1>
               <p className="text-lg mb-8 text-gray-600">
                 Trusted by homeowners across the UK. Expert boiler installation, repair, and servicing with 24/7 emergency support.
@@ -126,6 +126,31 @@ export default function Home() {
                   priority
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gas Safe Certified Badge */}
+      <section className="bg-green-50 py-12 border-b-2 border-green-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+            <div className="flex-shrink-0">
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <Image
+                  src="/images/gas-safe-register.jpeg"
+                  alt="Gas Safe Register Certification"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">Gas Safe Registered</h3>
+              <p className="text-gray-600 max-w-md">
+                All our technicians are fully Gas Safe certified. Your safety is our top priority, and every job meets the highest industry standards.
+              </p>
             </div>
           </div>
         </div>
