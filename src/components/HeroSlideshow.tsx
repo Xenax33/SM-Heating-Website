@@ -10,7 +10,7 @@ export default function HeroSlideshow() {
 
   const slides = [
     {
-      image: '/images/slideshow/1.jpeg',
+      image: '/images/slideshow/6.jpg',
       alt: '',
     },
     {
@@ -30,7 +30,7 @@ export default function HeroSlideshow() {
       alt: '',
     },
     {
-      image: '/images/slideshow/6.jpg',
+      image: '/images/slideshow/1.jpeg',
       alt: '',
     },
     {

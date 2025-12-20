@@ -8,7 +8,7 @@ export default function AutoSlideshow() {
 
   const slides = [
     {
-      image: '/images/slideshow/1.jpeg',
+      image: '/images/slideshow/6.jpg',
       alt: 'Professional heating installation',
       title: 'Professional Installation',
       description: 'Expert boiler and heating system installation',
@@ -38,7 +38,7 @@ export default function AutoSlideshow() {
       description: 'Certified and experienced professionals',
     },
     {
-      image: '/images/slideshow/6.jpg',
+      image: '/images/slideshow/1.jpeg',
       alt: 'Boiler installation in progress',
       title: 'Quality Installation',
       description: 'Premium boiler installation services',
