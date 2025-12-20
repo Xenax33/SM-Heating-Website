@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import AutoSlideshow from '@/components/AutoSlideshow';
 
 export const metadata: Metadata = {
-  title: 'About Us | SM Heating & Plumbing',
-  description: 'Learn about SM Heating & Plumbing – trusted local experts in heating and plumbing with over 15 years of experience.',
+  title: 'About SM Heating & Plumbing | Gas Safe Certified Local Experts Glasgow',
+  description: 'Trusted local heating and plumbing experts with over 15 years of experience. Gas Safe registered engineers serving Glasgow and surrounding areas. Professional workmanship and excellent customer service.',
 };
 
 export default function About() {
@@ -53,23 +54,17 @@ export default function About() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Who We Are</h2>
               <p className="text-gray-600 text-lg mb-4">
-                SM Heating & Plumbing has been serving homeowners across the UK for over 15 years. Founded on principles of professionalism, reliability, and customer care, we've built our reputation by consistently delivering exceptional service.
+                SM Heating & Plumbing is a qualified and trusted engineering company with several years of experience in the heating and plumbing industry. We proudly serve Glasgow and surrounding areas, operating 24/7 to provide reliable and efficient services whenever our customers need us.
               </p>
               <p className="text-gray-600 text-lg mb-4">
-                Our team of certified technicians combines modern expertise with traditional craftsmanship to solve even the most challenging heating and plumbing issues. Whether it's emergency repairs or planned installations, we approach every job with the same commitment to excellence.
+                Our company is built on a fully committed team of highly skilled and proficient engineers who take pride in delivering high-quality workmanship, professional service, and complete customer satisfaction on every job.
               </p>
               <p className="text-gray-600 text-lg">
-                We believe that every customer deserves transparent pricing, expert advice, and work that stands the test of time. That's the SM Heating & Plumbing difference.
+                Whether it's emergency repairs, planned installations, or routine maintenance, we approach every project with the same level of expertise and dedication to excellence that has made us a trusted name across Glasgow and the surrounding areas.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-red-50 to-blue-50 rounded-lg h-96 flex items-center justify-center border border-red-100 overflow-hidden shadow-lg image-hover">
-              <Image
-                src="/images/boiler-heating-system.jpg"
-                alt="Company team"
-                width={400}
-                height={300}
-                className="object-cover w-full h-full"
-              />
+            <div className="bg-gradient-to-br from-red-50 to-blue-50 rounded-2xl overflow-hidden">
+              <AutoSlideshow />
             </div>
           </div>
         </div>

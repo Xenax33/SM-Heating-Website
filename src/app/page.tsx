@@ -1,5 +1,13 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import HeroSlideshow from '@/components/HeroSlideshow';
+import LocationMap from '@/components/LocationMap';
+
+export const metadata: Metadata = {
+  title: 'SM Heating & Plumbing | Gas Safe Certified Services in Glasgow',
+  description: 'Expert Gas Safe registered boiler installation, repair, and servicing across Glasgow and surrounding areas. 24/7 emergency support for heating and plumbing issues.',
+};
 
 export default function Home() {
   const services = [
@@ -75,56 +83,49 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-red-50 to-blue-50 text-gray-800 py-20 md:py-32 border-b-2 border-red-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-800">
-                <span className="text-red-600">SM</span> Professional Heating & Plumbing Services
-              </h1>
-              <p className="text-lg mb-8 text-gray-600">
-                Trusted by homeowners across the UK. Expert boiler installation, repair, and servicing with 24/7 emergency support.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors text-center"
-                >
-                  Get a Free Quote
-                </Link>
-                <Link
-                  href="/contact"
-                  className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-bold hover:bg-red-50 transition-colors text-center"
-                >
-                  Contact Us
-                </Link>
-              </div>
-              <div className="mt-10 flex gap-8 text-sm">
-                <div>
-                  <p className="text-3xl font-bold text-red-600">15+</p>
-                  <p className="text-gray-600">Years Experience</p>
+      {/* Animated Banner Hero Section - Full Width */}
+      <section className="relative w-full">
+        <HeroSlideshow />
+        
+        {/* Content Overlay on Banner */}
+        <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pointer-events-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="text-white drop-shadow-lg">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-md">
+                  <span className="text-red-600">SM</span> Heating & Plumbing Services
+                </h1>
+                <p className="text-lg md:text-xl mb-8 drop-shadow-md">
+                  Professional boiler, heating, plumbing, and domestic appliance repair, services, and maintenance across Glasgow and surrounding areas. With a skilled and fully committed team, we operate 24/7, delivering reliable, high-quality workmanship and excellent customer service.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/contact"
+                    className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors text-center shadow-lg hover:shadow-xl"
+                  >
+                    Get a Free Quote
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-gray-800 transition-colors text-center shadow-lg hover:shadow-xl backdrop-blur-sm"
+                  >
+                    Contact Us
+                  </Link>
                 </div>
-                <div>
-                  <p className="text-3xl font-bold text-red-600">2000+</p>
-                  <p className="text-gray-600">Homes Served</p>
+                <div className="mt-10 flex gap-8 text-sm cursor-pointer">
+                  <div className="bg-red-600/40 backdrop-blur-md px-6 py-3 rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
+                    <p className="text-3xl font-bold text-white">15+</p>
+                    <p className="text-white font-semibold">Years Experience</p>
+                  </div>
+                  <div className="bg-red-600/40 backdrop-blur-md px-6 py-3 rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
+                    <p className="text-3xl font-bold text-white">2000+</p>
+                    <p className="text-white font-semibold">Homes Served</p>
+                  </div>
+                  <div className="bg-red-600/40 backdrop-blur-md px-6 py-3 rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
+                    <p className="text-3xl font-bold text-white">24/7</p>
+                    <p className="text-white font-semibold">Emergency Support</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-3xl font-bold text-red-600">24/7</p>
-                  <p className="text-gray-600">Emergency Support</p>
-                </div>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="bg-gradient-to-br from-red-100 to-blue-100 rounded-lg h-96 flex items-center justify-center overflow-hidden shadow-2xl image-hover">
-                <Image
-                  src="/images/boiler-heating-system.jpg"
-                  alt="Professional heating solutions"
-                  width={500}
-                  height={400}
-                  className="object-cover w-full h-full"
-                  priority
-                />
               </div>
             </div>
           </div>
@@ -282,6 +283,115 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-6 text-center text-gray-800">Find Us in Glasgow</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Located in the heart of Glasgow with service coverage across the surrounding areas. Easily accessible and ready to serve your heating and plumbing needs.
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Map */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <LocationMap />
+            </div>
+            {/* Location Info */}
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-red-50 to-blue-50 rounded-2xl p-8 border-2 border-red-200 shadow-lg">
+                <h3 className="text-3xl font-bold mb-4 text-gray-800">📍 Our Location</h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm uppercase tracking-wider font-semibold text-red-600 mb-2">Address</p>
+                    <p className="text-lg text-gray-700 font-semibold">
+                      16 Duncansby Road<br />
+                      Glasgow G33 4QX
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm uppercase tracking-wider font-semibold text-red-600 mb-2">Phone</p>
+                    <a href="tel:+441234567890" className="text-lg text-gray-700 hover:text-red-600 font-semibold transition-colors">
+                      +44 (0) 123 456 7890
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-sm uppercase tracking-wider font-semibold text-red-600 mb-2">Email</p>
+                    <a href="mailto:info@smheating.co.uk" className="text-lg text-gray-700 hover:text-red-600 font-semibold transition-colors">
+                      info@smheating.co.uk
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-sm uppercase tracking-wider font-semibold text-red-600 mb-2">Business Hours</p>
+                    <ul className="text-gray-700 space-y-1">
+                      <li>Monday - Friday: 8:00 AM - 6:00 PM</li>
+                      <li>Saturday: 9:00 AM - 4:00 PM</li>
+                      <li className="font-semibold text-red-600 mt-2">24/7 Emergency Available</li>
+                    </ul>
+                  </div>
+                </div>
+                <a
+                  href="https://www.google.com/maps/search/16+Duncansby+Road+Glasgow+G33+4QX"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-block bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl"
+                >
+                  Get Directions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-gray-800">Areas We Serve</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Professional heating and plumbing services across Glasgow and surrounding areas. Same quality service wherever you are.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+            {[
+              'Glasgow',
+              'Hamilton',
+              'Paisley',
+              'Wishaw',
+              'Lanark',
+              'Glasgow East',
+              'Glasgow West',
+              'Motherwell',
+              'Strathblane',
+              'Coatbridge',
+              'Chryston',
+              'East Kilbride',
+              'Giffnock',
+            ].map((city, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-4 text-center hover:border-red-300 hover:shadow-md hover:from-red-50 hover:to-red-100 transition-all duration-300"
+              >
+                <p className="font-semibold text-gray-800">📍 {city}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-gray-600 mb-8">
+            Looking for service in another area? <Link href="/contact" className="text-red-600 font-semibold hover:text-red-700">Contact us</Link> – we may be able to help or recommend a trusted partner in your location.
+          </p>
+
+          <div className="text-center">
+            <Link
+              href="/contact"
+              className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block"
+            >
+              Get Service in Your Area
+            </Link>
           </div>
         </div>
       </section>

@@ -42,6 +42,7 @@ export default function Footer() {
               <li><Link href="/services#boiler-repair" className="hover:text-red-600 transition-colors">Boiler Repair</Link></li>
               <li><Link href="/services#central-heating" className="hover:text-red-600 transition-colors">Central Heating</Link></li>
               <li><Link href="/services#emergency" className="hover:text-red-600 transition-colors">Emergency Call-outs</Link></li>
+              <li><Link href="/services#appliance-repair" className="hover:text-red-600 transition-colors">Appliance Repair & Maintenance</Link></li>
             </ul>
           </div>
 

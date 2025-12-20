@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
+import LocationMap from '@/components/LocationMap';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | SM Heating & Plumbing',
-  description: 'Get in touch with SM Heating & Plumbing. Call, email, or fill out our contact form for a free quote.',
+  title: 'Contact SM Heating & Plumbing Glasgow | Emergency Services Available',
+  description: 'Contact SM Heating & Plumbing for a free quote. Gas Safe registered engineers available 24/7 for emergency heating and plumbing services in Glasgow and surrounding areas.',
 };
 
 export default function Contact() {
@@ -29,47 +30,63 @@ export default function Contact() {
               <h2 className="text-2xl font-bold mb-8">Get in Touch</h2>
 
               {/* Phone */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold mb-2 text-gray-800">📞 Phone</h3>
-                <p className="text-gray-600 mb-2">Available 24/7 for emergencies</p>
+              <div className="mb-6">
                 <a
                   href="tel:+441234567890"
-                  className="text-red-600 font-bold text-lg hover:text-red-700"
+                  className="group block p-5 bg-gradient-to-br from-red-50 to-red-100 rounded-lg border border-red-200 hover:border-red-400 hover:shadow-md transition-all"
                 >
-                  +44 (0) 123 456 7890
+                  <h3 className="text-lg font-bold mb-2 text-gray-800 group-hover:text-red-600 transition-colors">📞 Phone</h3>
+                  <p className="text-gray-600 text-sm mb-3">Available 24/7 for emergencies</p>
+                  <p className="text-red-600 font-bold text-lg group-hover:text-red-700">
+                    +44 (0) 123 456 7890
+                  </p>
                 </a>
               </div>
 
               {/* Email */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold mb-2 text-gray-800">✉️ Email</h3>
-                <p className="text-gray-600 mb-2">We'll respond within 24 hours</p>
+              <div className="mb-6">
                 <a
                   href="mailto:info@smheating.co.uk"
-                  className="text-red-600 font-bold hover:text-red-700"
+                  className="group block p-5 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg border border-blue-200 hover:border-blue-400 hover:shadow-md transition-all"
                 >
-                  info@smheating.co.uk
+                  <h3 className="text-lg font-bold mb-2 text-gray-800 group-hover:text-red-600 transition-colors">✉️ Email</h3>
+                  <p className="text-gray-600 text-sm mb-3">We'll respond within 24 hours</p>
+                  <p className="text-red-600 font-bold group-hover:text-red-700">
+                    info@smheating.co.uk
+                  </p>
                 </a>
               </div>
 
               {/* Address */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold mb-2">📍 Location</h3>
-                <p className="text-gray-600">
-                  Serving customers across the UK<br />
-                  Local service, professional standards
-                </p>
+              <div className="mb-6">
+                <a
+                  href="https://www.google.com/maps/search/16+Duncansby+Road+Glasgow+G33+4QX"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block p-5 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg border border-blue-200 hover:border-red-300 hover:shadow-md hover:from-red-50 hover:to-red-100 transition-all"
+                >
+                  <h3 className="text-lg font-bold mb-2 text-gray-800 group-hover:text-red-600 transition-colors">📍 Location</h3>
+                  <p className="text-gray-700 font-semibold mb-3">
+                    16 Duncansby Road<br />
+                    Glasgow G33 4QX
+                  </p>
+                  <p className="text-xs text-gray-500 group-hover:text-red-500 transition-colors">
+                    Click to view on map →
+                  </p>
+                </a>
               </div>
 
               {/* Business Hours */}
               <div>
-                <h3 className="text-xl font-bold mb-2">🕐 Hours</h3>
-                <ul className="text-gray-600 space-y-1">
-                  <li>Monday - Friday: 8:00 AM - 6:00 PM</li>
-                  <li>Saturday: 9:00 AM - 4:00 PM</li>
-                  <li>Sunday: Emergency Only</li>
-                  <li className="font-semibold text-red-600 mt-2">24/7 Emergency Available</li>
-                </ul>
+                <div className="p-5 bg-gradient-to-br from-green-50 to-green-100 rounded-lg border border-green-200">
+                  <h3 className="text-lg font-bold mb-3 text-gray-800">🕐 Hours</h3>
+                  <ul className="text-gray-700 space-y-2 text-sm">
+                    <li><span className="font-semibold">Mon - Fri:</span> 8:00 AM - 6:00 PM</li>
+                    <li><span className="font-semibold">Saturday:</span> 9:00 AM - 4:00 PM</li>
+                    <li><span className="font-semibold">Sunday:</span> Emergency Only</li>
+                    <li className="font-semibold text-red-600 mt-3 pt-2 border-t border-green-300">🚨 24/7 Emergency Available</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -78,6 +95,37 @@ export default function Contact() {
               <h2 className="text-2xl font-bold mb-6 text-gray-800">Send us a Message</h2>
               <ContactForm />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Map */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-6 text-center text-gray-800">Find Us on the Map</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            We're located in Glasgow and serve customers across the greater Glasgow area and surrounding regions. Visit us or call for directions.
+          </p>
+          <div className="bg-white rounded-lg p-6 shadow-lg">
+            <LocationMap />
+          </div>
+          <div className="mt-8 bg-blue-50 rounded-lg p-6 border border-blue-200">
+            <h3 className="text-2xl font-bold mb-2 text-gray-800">Our Address</h3>
+            <p className="text-lg text-gray-700 font-semibold mb-2">
+              16 Duncansby Road<br />
+              Glasgow G33 4QX
+            </p>
+            <p className="text-gray-600 mb-4">
+              Located in the heart of Glasgow, we're easily accessible and ready to serve your heating and plumbing needs.
+            </p>
+            <a
+              href="https://www.google.com/maps/search/16+Duncansby+Road+Glasgow+G33+4QX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors"
+            >
+              Get Directions
+            </a>
           </div>
         </div>
       </section>
@@ -108,9 +156,9 @@ export default function Contact() {
             ].map((city, index) => (
               <div
                 key={index}
-                className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center hover:border-red-300 hover:shadow-md transition-all"
+                className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-4 text-center hover:border-red-300 hover:shadow-md hover:from-red-50 hover:to-red-100 transition-all duration-300"
               >
-                <p className="font-semibold text-gray-800">{city}</p>
+                <p className="font-semibold text-gray-800">📍 {city}</p>
               </div>
             ))}
           </div>
