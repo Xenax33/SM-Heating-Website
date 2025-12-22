@@ -86,44 +86,47 @@ export default function Home() {
       {/* Animated Banner Hero Section - Full Width */}
       <section className="relative w-full">
         <HeroSlideshow />
-        
         {/* Content Overlay on Banner */}
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pointer-events-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="text-white drop-shadow-lg">
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-md">
-                  <span className="text-red-600">SM</span> Heating & Plumbing Services
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-center pointer-events-auto">
+            <div className="w-full">
+              <div className="max-w-2xl">
+                <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight drop-shadow-2xl text-white">
+                  <span className="text-red-600 drop-shadow-2xl">SM</span> Heating & Plumbing Services
                 </h1>
-                <p className="text-lg md:text-xl mb-8 drop-shadow-md">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4 sm:mb-6 md:mb-8 drop-shadow-2xl text-white leading-relaxed hidden sm:block">
                   Professional boiler, heating, plumbing, and domestic appliance repair, services, and maintenance across Glasgow and surrounding areas. With a skilled and fully committed team, we operate 24/7, delivering reliable, high-quality workmanship and excellent customer service.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                {/* Shorter description for mobile */}
+                <p className="text-xs mb-3 drop-shadow-2xl text-white leading-relaxed sm:hidden">
+                  Professional heating, plumbing, and appliance services across Glasgow. Available 24/7.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6">
                   <Link
                     href="/contact"
-                    className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors text-center shadow-lg hover:shadow-xl"
+                    className="bg-red-600 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-lg font-bold hover:bg-red-700 transition-colors text-center shadow-lg hover:shadow-xl text-xs sm:text-sm md:text-base"
                   >
                     Get a Free Quote
                   </Link>
                   <Link
                     href="/contact"
-                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-gray-800 transition-colors text-center shadow-lg hover:shadow-xl backdrop-blur-sm"
+                    className="border-2 border-white text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-lg font-bold hover:bg-white hover:text-gray-800 transition-colors text-center shadow-lg hover:shadow-xl backdrop-blur-sm text-xs sm:text-sm md:text-base"
                   >
                     Contact Us
                   </Link>
                 </div>
-                <div className="mt-10 flex gap-8 text-sm cursor-pointer">
-                  <div className="bg-red-600/40 backdrop-blur-md px-6 py-3 rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
-                    <p className="text-3xl font-bold text-white">15+</p>
-                    <p className="text-white font-semibold">Years Experience</p>
+                <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 lg:gap-6">
+                  <div className="bg-red-600/40 backdrop-blur-md px-3 sm:px-4 md:px-5 lg:px-6 py-1.5 sm:py-2 md:py-2.5 lg:py-3 rounded-lg sm:rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">15+</p>
+                    <p className="text-white font-semibold text-[10px] sm:text-xs md:text-sm whitespace-nowrap">Years Experience</p>
                   </div>
-                  <div className="bg-red-600/40 backdrop-blur-md px-6 py-3 rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
-                    <p className="text-3xl font-bold text-white">2000+</p>
-                    <p className="text-white font-semibold">Homes Served</p>
+                  <div className="bg-red-600/40 backdrop-blur-md px-3 sm:px-4 md:px-5 lg:px-6 py-1.5 sm:py-2 md:py-2.5 lg:py-3 rounded-lg sm:rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">2000+</p>
+                    <p className="text-white font-semibold text-[10px] sm:text-xs md:text-sm whitespace-nowrap">Homes Served</p>
                   </div>
-                  <div className="bg-red-600/40 backdrop-blur-md px-6 py-3 rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
-                    <p className="text-3xl font-bold text-white">24/7</p>
-                    <p className="text-white font-semibold">Emergency Support</p>
+                  <div className="bg-red-600/40 backdrop-blur-md px-3 sm:px-4 md:px-5 lg:px-6 py-1.5 sm:py-2 md:py-2.5 lg:py-3 rounded-lg sm:rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">24/7</p>
+                    <p className="text-white font-semibold text-[10px] sm:text-xs md:text-sm whitespace-nowrap">Emergency Support</p>
                   </div>
                 </div>
               </div>
@@ -247,21 +250,18 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((reason, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl overflow-hidden border border-gray-100 card-hover hover:border-red-200 shadow-md hover:shadow-2xl transition-all duration-300"
               >
                 {/* Animated gradient background on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-red-50/0 to-blue-50/0 group-hover:from-red-50 group-hover:to-blue-50 transition-all duration-500 pointer-events-none"></div>
-                
                 {/* Accent line at top */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-red-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
                 {/* Number circle */}
                 <div className="absolute -top-3 -right-3 w-16 h-16 bg-red-600 rounded-full flex items-center justify-center font-bold text-white text-lg shadow-lg group-hover:scale-110 transition-transform duration-300 origin-center">
                   {index + 1}
                 </div>
-                
                 {/* Content */}
                 <div className="relative p-8">
                   <div className="mb-6">
@@ -269,15 +269,12 @@ export default function Home() {
                       {reason.icon}
                     </div>
                   </div>
-                  
                   <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-red-600 transition-colors duration-300">
                     {reason.title}
                   </h3>
-                  
                   <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                     {reason.description}
                   </p>
-                  
                   {/* Hover indicator line */}
                   <div className="mt-4 h-1 w-0 bg-gradient-to-r from-red-600 to-blue-600 group-hover:w-12 transition-all duration-500"></div>
                 </div>
