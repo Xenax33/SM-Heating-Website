@@ -7,6 +7,8 @@ export default function HeroSlideshow() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   const slides = [
     {
@@ -75,9 +77,44 @@ export default function HeroSlideshow() {
     setTimeout(() => setIsAutoPlay(true), 3000);
   };
 
+  // Handle touch start
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  // Handle touch move
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  // Handle touch end - detect swipe direction
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    }
+    if (isRightSwipe) {
+      prevSlide();
+    }
+
+    // Reset
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
+
   return (
     <>
-      <div className="relative w-full h-screen md:h-[600px] overflow-hidden group bg-black">
+      <div 
+        className="relative w-full h-screen md:h-[600px] overflow-hidden group bg-black"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         {/* Animated Slides with Scale and Fade */}
         <div className="relative w-full h-full">
           {slides.map((slide, index) => (
@@ -101,8 +138,8 @@ export default function HeroSlideshow() {
                   setLightboxOpen(true);
                 }}
               />
-              {/* Premium Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-black/40 transition-opacity duration-300 group-hover:from-black/30 group-hover:via-black/5 group-hover:to-black/30"></div>
+              {/* Premium Gradient Overlay - Enhanced for mobile readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60 sm:from-black/40 sm:via-black/10 sm:to-black/40 transition-opacity duration-300 group-hover:from-black/30 group-hover:via-black/5 group-hover:to-black/30"></div>
               
               {/* Animated accent line on top */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -110,13 +147,13 @@ export default function HeroSlideshow() {
           ))}
         </div>
 
-        {/* Premium Navigation - Left Button */}
+        {/* Premium Navigation - Left Button - Hidden below 1395px */}
         <button
           onClick={(e) => {
             e.stopPropagation();
             prevSlide();
           }}
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 group/btn z-40 transition-all duration-300 cursor-pointer"
+          className="hidden min-[1395px]:block absolute left-4 lg:left-6 top-1/2 transform -translate-y-1/2 group/btn z-50 transition-all duration-300 cursor-pointer"
           aria-label="Previous slide"
           type="button"
         >
@@ -135,13 +172,13 @@ export default function HeroSlideshow() {
           </div>
         </button>
 
-        {/* Premium Navigation - Right Button */}
+        {/* Premium Navigation - Right Button - Hidden below 1395px */}
         <button
           onClick={(e) => {
             e.stopPropagation();
             nextSlide();
           }}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 group/btn z-40 transition-all duration-300 cursor-pointer"
+          className="hidden min-[1395px]:block absolute right-4 lg:right-6 top-1/2 transform -translate-y-1/2 group/btn z-50 transition-all duration-300 cursor-pointer"
           aria-label="Next slide"
           type="button"
         >
@@ -160,8 +197,24 @@ export default function HeroSlideshow() {
           </div>
         </button>
 
-        {/* Animated Badge */}
-        <div className="absolute bottom-8 right-6 bg-red-600/80 backdrop-blur-md text-white px-4 py-2 rounded-full text-xs font-bold z-20 shadow-lg border border-red-400/30 animate-pulse cursor-pointer" onClick={() => setLightboxOpen(true)}>
+        {/* Slide Indicators (Dots) - Visible on all screens, especially useful when nav buttons are hidden */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-30">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`transition-all duration-300 rounded-full ${
+                index === currentSlide
+                  ? 'w-8 h-2 bg-red-600'
+                  : 'w-2 h-2 bg-white/50 hover:bg-white/80'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Animated Badge - Only visible on screens >= 1395px */}
+        <div className="hidden min-[1395px]:block absolute bottom-6 sm:bottom-8 right-4 sm:right-6 bg-red-600/80 backdrop-blur-md text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-bold z-20 shadow-lg border border-red-400/30 animate-pulse cursor-pointer" onClick={() => setLightboxOpen(true)}>
           🔥 CLICK TO ENLARGE
         </div>
       </div>
@@ -243,23 +296,6 @@ export default function HeroSlideshow() {
           </div>
         </div>
       )}
-
-      {/* Keyframe animations */}
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: scale(0.95);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.5s ease-in-out;
-        }
-      `}</style>
     </>
   );
 }
