@@ -32,13 +32,29 @@ export default function Contact() {
               {/* Phone */}
               <div className="mb-6">
                 <a
-                  href="tel:+441234567890"
+                  href="tel:07487616462"
                   className="group block p-5 bg-gradient-to-br from-red-50 to-red-100 rounded-lg border border-red-200 hover:border-red-400 hover:shadow-md transition-all"
                 >
                   <h3 className="text-lg font-bold mb-2 text-gray-800 group-hover:text-red-600 transition-colors">📞 Phone</h3>
                   <p className="text-gray-600 text-sm mb-3">Available 24/7 for emergencies</p>
                   <p className="text-red-600 font-bold text-lg group-hover:text-red-700">
-                    +44 (0) 123 456 7890
+                    07487 616462
+                  </p>
+                </a>
+              </div>
+
+              {/* WhatsApp */}
+              <div className="mb-6">
+                <a
+                  href="https://wa.me/447487616462"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block p-5 bg-gradient-to-br from-green-50 to-green-100 rounded-lg border border-green-200 hover:border-green-400 hover:shadow-md transition-all"
+                >
+                  <h3 className="text-lg font-bold mb-2 text-gray-800 group-hover:text-green-600 transition-colors">💬 WhatsApp</h3>
+                  <p className="text-gray-600 text-sm mb-3">Quick response via WhatsApp</p>
+                  <p className="text-green-600 font-bold text-lg group-hover:text-green-700">
+                    07487 616462
                   </p>
                 </a>
               </div>
@@ -78,7 +94,7 @@ export default function Contact() {
 
               {/* Business Hours */}
               <div>
-                <div className="p-5 bg-gradient-to-br from-green-50 to-green-100 rounded-lg border border-green-200">
+                <div className="p-5 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg border border-blue-200">
                   <h3 className="text-lg font-bold mb-3 text-gray-800">🕐 Hours</h3>
                   <ul className="text-gray-700 space-y-2 text-sm">
                     <li><span className="font-semibold">Mon - Fri:</span> 8:00 AM - 6:00 PM</li>
@@ -229,12 +245,22 @@ export default function Contact() {
           <p className="text-lg mb-8 text-gray-600">
             Fill out the form above or give us a call for immediate assistance.
           </p>
-          <a
-            href="tel:+441234567890"
-            className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block"
-          >
-            Call Now: +44 (0) 123 456 7890
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:07487616462"
+              className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block"
+            >
+              📞 Call Now: 07487 616462
+            </a>
+            <a
+              href="https://wa.me/447487616462"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-green-700 transition-colors inline-block"
+            >
+              💬 WhatsApp: 07487 616462
+            </a>
+          </div>
         </div>
       </section>
     </div>

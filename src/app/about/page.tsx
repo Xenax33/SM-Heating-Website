@@ -9,26 +9,50 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
-  const team = [
+  const placeholderImage = '/images/testimonials/placeholder.svg';
+
+  const testimonials = [
     {
-      name: 'Michael Smith',
-      role: 'Lead Technician & Founder',
-      bio: 'With 20+ years in the heating industry, Michael established SM Heating & Plumbing to deliver exceptional service to local customers.',
+      name: 'Aisha Khan',
+      location: 'Glasgow East',
+      rating: 5,
+      review: 'Absolutely brilliant service! They fixed our boiler within hours of calling. Very professional and reasonably priced. Highly recommend to anyone in Glasgow.',
+      image: '',
     },
     {
-      name: 'Sarah Johnson',
-      role: 'Operations Manager',
-      bio: 'Sarah ensures every customer receives professional, timely service with attention to detail and satisfaction guaranteed.',
+      name: 'Marcus Thompson',
+      location: 'Motherwell',
+      rating: 5,
+      review: 'Outstanding workmanship. The team installed our new boiler system and everything was done to perfection. Clean, efficient, and the heating works brilliantly.',
+      image: '',
     },
     {
-      name: 'James Wilson',
-      role: 'Senior Technician',
-      bio: 'James specializes in complex heating system installations and repairs with certifications across all major boiler brands.',
+      name: 'Sarah McDonald',
+      location: 'Paisley',
+      rating: 5,
+      review: 'Called them for an emergency repair on a Sunday evening. They came out straight away and had us sorted in no time. Can\'t thank them enough!',
+      image: '',
     },
     {
-      name: 'Emma Davis',
-      role: 'Customer Service Lead',
-      bio: 'Emma coordinates emergency calls and ensures customers receive rapid response and clear communication throughout their service.',
+      name: 'Jamal Williams',
+      location: 'Hamilton',
+      rating: 5,
+      review: 'Very impressed with their service from start to finish. Transparent pricing, no hidden costs, and the technician was very knowledgeable. Will definitely use again.',
+      image: '',
+    },
+    {
+      name: 'Muhammad Ali',
+      location: 'Glasgow West',
+      rating: 5,
+      review: "Fantastic customer service and professional engineers. They serviced our boiler and explained everything clearly. Feel much safer knowing it's been checked properly.",
+      image: '',
+    },
+    {
+      name: "Jennifer O'Connor",
+      location: 'East Kilbride',
+      rating: 5,
+      review: "Best heating company we've used in Glasgow. Quick response, fair prices, and they really care about getting it right. Our new central heating is working perfectly!",
+      image: '',
     },
   ];
 
@@ -232,20 +256,40 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Customer Testimonials Section */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-12 text-center text-gray-800">Meet Our Team</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-gray-800">What Our Customers Say</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Don't just take our word for it - hear from our satisfied customers across Glasgow.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-            <div key={member.name} className="group bg-gradient-to-br from-white to-gray-50 rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300 overflow-hidden text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-red-100 to-blue-100 rounded-full flex items-center justify-center border-2 border-red-200 overflow-hidden group-hover:scale-110 transition-transform duration-300">
-                  <p className="text-4xl">👤</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={testimonial.name} className="group bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-100 to-blue-100 rounded-full flex items-center justify-center border-2 border-red-200 overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                    <Image
+                      src={testimonial.image || placeholderImage}
+                      alt={testimonial.name}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-red-600 transition-colors">{testimonial.name}</h3>
+                    <p className="text-sm text-gray-600">{testimonial.location}</p>
+                    <div className="flex gap-1 mt-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <span key={i} className="text-yellow-500">⭐</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold mb-1 text-gray-900 group-hover:text-red-600 transition-colors">{member.name}</h3>
-                <p className="text-red-600 font-semibold mb-3 text-xs uppercase tracking-wide">{member.role}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
+                <p className="text-gray-600 text-sm leading-relaxed italic">"{testimonial.review}"</p>
               </div>
             ))}
           </div>

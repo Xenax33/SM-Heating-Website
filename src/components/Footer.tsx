@@ -52,7 +52,8 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4 text-gray-800">Contact</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li>Phone: <a href="tel:+441234567890" className="text-red-600 hover:text-red-700">+44 (0) 123 456 7890</a></li>
+              <li>Phone: <a href="tel:07487616462" className="text-red-600 hover:text-red-700">07487 616462</a></li>
+              <li>WhatsApp: <a href="https://wa.me/447487616462" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700">07487 616462</a></li>
               <li>Email: <a href="mailto:info@smheating.co.uk" className="text-red-600 hover:text-red-700">info@smheating.co.uk</a></li>
               <li>Available 24/7 for emergencies</li>
             </ul>

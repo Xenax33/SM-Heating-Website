@@ -10,6 +10,53 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const placeholderImage = '/images/testimonials/placeholder.svg';
+
+  const testimonials = [
+    {
+      name: 'Aisha Khan',
+      location: 'Glasgow East',
+      rating: 5,
+      review: 'Absolutely brilliant service! They fixed our boiler within hours of calling. Very professional and reasonably priced.',
+      image: '',
+    },
+    {
+      name: 'Marcus Thompson',
+      location: 'Motherwell',
+      rating: 5,
+      review: 'Outstanding workmanship. The team installed our new boiler system and everything was done to perfection.',
+      image: '',
+    },
+    {
+      name: 'Sarah McDonald',
+      location: 'Paisley',
+      rating: 5,
+      review: 'Called them for an emergency repair on a Sunday evening. They came out straight away and had us sorted in no time.',
+      image: '',
+    },
+    {
+      name: 'Jamal Williams',
+      location: 'Hamilton',
+      rating: 5,
+      review: 'Very impressed with their service from start to finish. Transparent pricing, no hidden costs.',
+      image: '',
+    },
+    {
+      name: 'Muhammad Ali',
+      location: 'Glasgow West',
+      rating: 5,
+      review: 'Fantastic customer service and professional engineers. Feel much safer knowing our boiler has been checked properly.',
+      image: '',
+    },
+    {
+      name: "Jennifer O'Connor",
+      location: 'East Kilbride',
+      rating: 5,
+      review: "Best heating company we've used in Glasgow. Quick response, fair prices, and they really care about getting it right.",
+      image: '',
+    },
+  ];
+
   const services = [
     {
       title: 'Boiler Installation',
@@ -87,7 +134,7 @@ export default function Home() {
       <section className="relative w-full">
         <HeroSlideshow />
         {/* Content Overlay on Banner */}
-        <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none pt-20 md:pt-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-center pointer-events-auto">
             <div className="w-full">
               <div className="max-w-2xl">
@@ -280,6 +327,55 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Testimonials */}
+      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-gray-800">What Our Customers Say</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Don't just take our word for it - hear from our satisfied customers across Glasgow.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={testimonial.name} className="group bg-white rounded-xl p-6 border border-gray-100 shadow-md hover:shadow-xl card-hover hover:border-red-200 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-100 to-blue-100 rounded-full flex items-center justify-center border-2 border-red-200 overflow-hidden group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                    <Image
+                      src={testimonial.image || placeholderImage}
+                      alt={testimonial.name}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="ml-4 flex-1">
+                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-red-600 transition-colors">{testimonial.name}</h3>
+                    <p className="text-sm text-gray-600">{testimonial.location}</p>
+                    <div className="flex gap-1 mt-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <span key={i} className="text-yellow-500">⭐</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed italic">\"{testimonial.review}\"</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/about"
+              className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Read More Reviews
+            </Link>
           </div>
         </div>
       </section>

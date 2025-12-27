@@ -110,7 +110,7 @@ export default function HeroSlideshow() {
   return (
     <>
       <div 
-        className="relative w-full h-screen md:h-[600px] overflow-hidden group bg-black"
+        className="relative w-full h-64 sm:h-80 md:h-[500px] lg:h-screen overflow-hidden group bg-black"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
