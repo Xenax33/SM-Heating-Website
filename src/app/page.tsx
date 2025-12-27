@@ -162,7 +162,7 @@ export default function Home() {
                     Contact Us
                   </Link>
                 </div>
-                <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 lg:gap-6">
+                <div className="hidden md:flex flex-wrap gap-2 sm:gap-3 md:gap-4 lg:gap-6">
                   <div className="bg-red-600/40 backdrop-blur-md px-3 sm:px-4 md:px-5 lg:px-6 py-1.5 sm:py-2 md:py-2.5 lg:py-3 rounded-lg sm:rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
                     <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">15+</p>
                     <p className="text-white font-semibold text-[10px] sm:text-xs md:text-sm whitespace-nowrap">Years Experience</p>
