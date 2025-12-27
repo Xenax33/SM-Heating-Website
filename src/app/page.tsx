@@ -134,21 +134,21 @@ export default function Home() {
       <section className="relative w-full">
         <HeroSlideshow />
         {/* Content Overlay on Banner */}
-        <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none pt-20 md:pt-0">
+        <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none pt-12 md:pt-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-center pointer-events-auto">
             <div className="w-full">
               <div className="max-w-2xl">
-                <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight drop-shadow-2xl text-white">
+                <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-4 md:mb-6 leading-tight drop-shadow-2xl text-white">
                   <span className="text-red-600 drop-shadow-2xl">SM</span> Heating & Plumbing Services
                 </h1>
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4 sm:mb-6 md:mb-8 drop-shadow-2xl text-white leading-relaxed hidden sm:block">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-3 sm:mb-6 md:mb-8 drop-shadow-2xl text-white leading-relaxed hidden sm:block">
                   Professional boiler, heating, plumbing, and domestic appliance repair, services, and maintenance across Glasgow and surrounding areas. With a skilled and fully committed team, we operate 24/7, delivering reliable, high-quality workmanship and excellent customer service.
                 </p>
                 {/* Shorter description for mobile */}
-                <p className="text-xs mb-3 drop-shadow-2xl text-white leading-relaxed sm:hidden">
+                <p className="text-xs mb-2 drop-shadow-2xl text-white leading-relaxed sm:hidden">
                   Professional heating, plumbing, and appliance services across Glasgow. Available 24/7.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 mb-0 sm:mb-6">
                   <Link
                     href="/contact"
                     className="bg-red-600 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-lg font-bold hover:bg-red-700 transition-colors text-center shadow-lg hover:shadow-xl text-xs sm:text-sm md:text-base"
