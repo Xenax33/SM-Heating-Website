@@ -15,20 +15,25 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "SM Heating & Plumbing | Gas Safe Engineers Glasgow",
   description: "Expert Gas Safe registered boiler installation, repair, and servicing across Glasgow. 24/7 emergency support available.",
   keywords: "boiler installation, boiler repair, heating services, plumbing, emergency repair, Glasgow, Gas Safe registered, central heating, plumbing services",
   authors: [{ name: "SM Heating & Plumbing" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   icons: {
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
   openGraph: {
