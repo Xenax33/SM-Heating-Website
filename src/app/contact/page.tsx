@@ -4,8 +4,8 @@ import ContactForm from '@/components/ContactForm';
 import LocationMap from '@/components/LocationMap';
 
 export const metadata: Metadata = {
-  title: 'Contact SM Heating & Plumbing Glasgow | Emergency Services Available',
-  description: 'Contact SM Heating & Plumbing for a free quote. Gas Safe registered engineers available 24/7 for emergency heating and plumbing services in Glasgow and surrounding areas.',
+  title: 'Contact SM Heating & Plumbing Glasgow | 24/7 Emergency',
+  description: 'Contact SM Heating & Plumbing for a free quote. Gas Safe registered engineers available 24/7 for emergency heating.',
 };
 
 export default function Contact() {

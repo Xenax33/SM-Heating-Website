@@ -5,8 +5,8 @@ import HeroSlideshow from '@/components/HeroSlideshow';
 import LocationMap from '@/components/LocationMap';
 
 export const metadata: Metadata = {
-  title: 'SM Heating & Plumbing | Gas Safe Certified Services in Glasgow',
-  description: 'Expert Gas Safe registered boiler installation, repair, and servicing across Glasgow and surrounding areas. 24/7 emergency support for heating and plumbing issues.',
+  title: 'SM Heating & Plumbing | Gas Safe Engineers Glasgow',
+  description: 'Expert Gas Safe registered boiler installation, repair, and servicing across Glasgow. 24/7 emergency support for heating and plumbing issues.',
 };
 
 export default function Home() {

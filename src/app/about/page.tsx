@@ -4,8 +4,8 @@ import Image from 'next/image';
 import AutoSlideshow from '@/components/AutoSlideshow';
 
 export const metadata: Metadata = {
-  title: 'About SM Heating & Plumbing | Gas Safe Certified Local Experts Glasgow',
-  description: 'Trusted local heating and plumbing experts with over 15 years of experience. Gas Safe registered engineers serving Glasgow and surrounding areas. Professional workmanship and excellent customer service.',
+  title: 'About SM Heating & Plumbing | Gas Safe Glasgow Experts',
+  description: 'Trusted local heating and plumbing experts with over 15 years of experience. Gas Safe registered engineers serving Glasgow.',
 };
 
 export default function About() {

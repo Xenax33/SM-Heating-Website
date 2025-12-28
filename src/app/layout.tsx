@@ -16,16 +16,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SM Heating & Plumbing | Gas Safe Certified Boiler Installation & Repair Glasgow",
-  description: "Expert Gas Safe registered boiler installation, repair, and servicing across Glasgow, Hamilton, Paisley, and surrounding areas. 24/7 emergency support available. Professional heating and plumbing solutions.",
+  title: "SM Heating & Plumbing | Gas Safe Engineers Glasgow",
+  description: "Expert Gas Safe registered boiler installation, repair, and servicing across Glasgow. 24/7 emergency support available.",
   keywords: "boiler installation, boiler repair, heating services, plumbing, emergency repair, Glasgow, Gas Safe registered, central heating, plumbing services",
   authors: [{ name: "SM Heating & Plumbing" }],
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow",
+  icons: {
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+  },
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://smheatingandplumbing.co.uk",
-    title: "SM Heating & Plumbing | Gas Safe Certified Services in Glasgow",
-    description: "Professional boiler installation, repair, and servicing. Gas Safe registered engineers. Available 24/7 for emergencies.",
+    title: "SM Heating & Plumbing | Gas Safe Engineers Glasgow",
+    description: "Professional boiler installation, repair, and servicing. Gas Safe registered engineers. Available 24/7.",
+    siteName: "SM Heating & Plumbing",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SM Heating & Plumbing | Gas Safe Engineers Glasgow",
+    description: "Professional boiler installation, repair, and servicing. Gas Safe registered engineers. Available 24/7.",
   },
 };
 

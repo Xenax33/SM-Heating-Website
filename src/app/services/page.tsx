@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Professional Heating & Plumbing Services | SM Heating & Plumbing Glasgow',
-  description: 'Comprehensive boiler installation, repair, servicing, central heating, plumbing, appliance repair, and 24/7 emergency call-outs. Gas Safe registered engineers serving Glasgow and surrounding areas.',
+  title: 'Heating & Plumbing Services Glasgow | SM Heating',
+  description: 'Boiler installation, repair, servicing, central heating, plumbing, and 24/7 emergency call-outs. Gas Safe registered engineers.',
 };
 
 export default function Services() {
