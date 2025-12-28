@@ -406,8 +406,8 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm uppercase tracking-wider font-semibold text-red-600 mb-2">Phone</p>
-                    <a href="tel:+441234567890" className="text-lg text-gray-700 hover:text-red-600 font-semibold transition-colors">
-                      +44 (0) 123 456 7890
+                    <a href="tel:+447487616462" className="text-lg text-gray-700 hover:text-red-600 font-semibold transition-colors">
+                      +44 (0) 7487 616462
                     </a>
                   </div>
                   <div>
@@ -506,10 +506,10 @@ export default function Home() {
               Contact Us Now
             </Link>
             <a
-              href="tel:+441234567890"
+              href="tel:+447487616462"
               className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-bold hover:bg-red-50 transition-colors text-center"
             >
-              Call: +44 (0) 123 456 7890
+              Call: +44 (0) 7487 616462
             </a>
           </div>
         </div>

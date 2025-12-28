@@ -61,7 +61,7 @@ export default function LocationMap() {
         marker
           .addTo(map)
           .bindPopup(
-            '<div style="text-align: center;"><strong>SM Heating & Plumbing</strong><br/>16 Duncansby Road<br/>Glasgow G33 4QX<br/><a href="tel:+441234567890">Call: +44 (0) 123 456 7890</a></div>'
+            '<div style="text-align: center;"><strong>SM Heating & Plumbing</strong><br/>16 Duncansby Road<br/>Glasgow G33 4QX<br/><a href="tel:+447487616462">Call: +44 (0) 7487 616462</a></div>'
           )
           .openPopup();
       };

@@ -9,7 +9,7 @@ export default function StructuredData() {
         'description': 'Professional Gas Safe registered boiler, heating, and plumbing services across Glasgow and surrounding areas',
         'url': 'https://smheatingandplumbing.co.uk',
         'image': 'https://smheatingandplumbing.co.uk/images/gas-safe-register.jpeg',
-        'telephone': '+44-123-456-7890',
+        'telephone': '+44-7487-616462',
         'email': 'info@smheating.co.uk',
         'address': {
           '@type': 'PostalAddress',
