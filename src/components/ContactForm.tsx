@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ export default function ContactForm() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -54,32 +56,49 @@ export default function ContactForm() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!validateForm()) {
       return;
     }
 
-    // Form is valid - show success state
-    setSubmitted(true);
-    setFormData({
-      fullName: '',
-      email: '',
-      phoneNumber: '',
-      message: '',
-    });
+    setLoading(true);
 
-    // Reset success message after 5 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 5000);
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        'service_4m67anh', // Your service ID
+        'template_c2zqyqk', // Your template ID
+        {
+          from_name: formData.fullName,
+          from_email: formData.email,
+          phone_number: formData.phoneNumber,
+          message: formData.message,
+          to_name: 'SM Heating & Plumbing',
+        },
+        'H86-Ldhs571-erbB9' // Your public key
+      );
 
-    // Here you would integrate with an email service like:
-    // - Formspree: https://formspree.io/
-    // - EmailJS: https://www.emailjs.com/
-    // - Resend: https://resend.com/
-    // - NextJS API route
+      console.log('Email sent successfully:', result.text);
+      setSubmitted(true);
+      setFormData({
+        fullName: '',
+        email: '',
+        phoneNumber: '',
+        message: '',
+      });
+
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      alert('Failed to send message. Please try again or call us directly.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -179,9 +198,14 @@ export default function ContactForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition-colors"
+          disabled={loading}
+          className={`w-full font-bold py-3 rounded-lg transition-colors ${
+            loading 
+              ? 'bg-gray-400 text-gray-200 cursor-not-allowed' 
+              : 'bg-red-600 text-white hover:bg-red-700'
+          }`}
         >
-          Send Message
+          {loading ? 'Sending...' : 'Send Message'}
         </button>
 
         <p className="text-xs text-gray-500 text-center">
