@@ -68,8 +68,8 @@ export default function ContactForm() {
     try {
       // Send email using EmailJS
       const result = await emailjs.send(
-        'service_4m67anh', // Your service ID
-        'template_c2zqyqk', // Your template ID
+        'service_ojzwvch', // Your service ID
+        'template_2pcedtl', // Your template ID
         {
           from_name: formData.fullName,
           from_email: formData.email,
@@ -77,7 +77,7 @@ export default function ContactForm() {
           message: formData.message,
           to_name: 'SM Heating & Plumbing',
         },
-        'H86-Ldhs571-erbB9' // Your public key
+        'p8fJuY4DHWqJcDt_4' // Your public key
       );
 
       console.log('Email sent successfully:', result.text);
