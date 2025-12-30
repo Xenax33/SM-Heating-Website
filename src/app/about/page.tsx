@@ -304,7 +304,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-5xl font-bold text-red-600 mb-2">15+</p>
+              <p className="text-5xl font-bold text-red-600 mb-2">7+</p>
               <p className="text-lg text-gray-700">Years Experience</p>
             </div>
             <div>
@@ -336,7 +336,7 @@ export default function About() {
             href="/contact"
             className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block"
           >
-            Get in Touch
+            Start Your Project
           </Link>
         </div>
       </section>

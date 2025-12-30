@@ -1,11 +1,7 @@
-import type { Metadata } from 'next';
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
-
-export const metadata: Metadata = {
-  title: 'Heating & Plumbing Services Glasgow | SM Heating',
-  description: 'Boiler installation, repair, servicing, central heating, plumbing, and 24/7 emergency call-outs. Gas Safe registered engineers.',
-};
 
 export default function Services() {
   const services = [
@@ -135,6 +131,9 @@ export default function Services() {
                         width={500}
                         height={400}
                         className="object-cover w-full h-full image-hover"
+                        onError={(e) => {
+                          e.currentTarget.src = '/404.jpg';
+                        }}
                       />
                       {/* Dark gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent opacity-100 group-hover:from-black/50 group-hover:to-transparent transition-all duration-300"></div>
@@ -190,7 +189,7 @@ export default function Services() {
               href="/contact"
               className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors text-center"
             >
-              Get a Free Quote
+              Book Your Service
             </Link>
             <a
               href="tel:+441234567890"

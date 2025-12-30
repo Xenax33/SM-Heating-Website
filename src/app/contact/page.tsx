@@ -76,7 +76,7 @@ export default function Contact() {
               {/* Address */}
               <div className="mb-6">
                 <a
-                  href="https://www.google.com/maps/search/16+Duncansby+Road+Glasgow+G33+4QX"
+                  href="https://www.google.com/maps/dir/?api=1&destination=55.856479205013734,-4.149371813436323"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group block p-5 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg border border-blue-200 hover:border-red-300 hover:shadow-md hover:from-red-50 hover:to-red-100 transition-all"

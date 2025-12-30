@@ -155,12 +155,12 @@ export default function Home() {
                     href="/contact"
                     className="border-2 border-white text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-lg font-bold hover:bg-white hover:text-gray-800 transition-colors text-center shadow-lg hover:shadow-xl backdrop-blur-sm text-xs sm:text-sm md:text-base"
                   >
-                    Contact Us
+                    Call for Help
                   </Link>
                 </div>
                 <div className="hidden md:flex flex-wrap gap-2 sm:gap-3 md:gap-4 lg:gap-6">
                   <div className="bg-red-600/40 backdrop-blur-md px-3 sm:px-4 md:px-5 lg:px-6 py-1.5 sm:py-2 md:py-2.5 lg:py-3 rounded-lg sm:rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
-                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">15+</p>
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">7+</p>
                     <p className="text-white font-semibold text-[10px] sm:text-xs md:text-sm whitespace-nowrap">Years Experience</p>
                   </div>
                   <div className="bg-red-600/40 backdrop-blur-md px-3 sm:px-4 md:px-5 lg:px-6 py-1.5 sm:py-2 md:py-2.5 lg:py-3 rounded-lg sm:rounded-xl border border-red-400/30 shadow-lg hover:bg-red-600/50 transition-colors">
@@ -225,6 +225,8 @@ export default function Home() {
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
+                role="img"
+                aria-label={`${service.title} background`}
               >
                 {/* Image with overlay */}
                 <Image
@@ -264,7 +266,7 @@ export default function Home() {
                       href="/services"
                       className="inline-flex items-center text-red-400 hover:text-red-300 font-semibold text-sm transition-colors"
                     >
-                      Learn More
+                      Service Details
                       <span className="ml-2">→</span>
                     </Link>
                   </div>
@@ -278,7 +280,7 @@ export default function Home() {
               href="/services"
               className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors inline-block"
             >
-              View All Services
+              Browse Our Services
             </Link>
           </div>
         </div>
@@ -366,7 +368,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed italic">\"{testimonial.review}\"</p>
+                <p className="text-gray-600 text-sm leading-relaxed italic">"{testimonial.review}"</p>
               </div>
             ))}
           </div>
@@ -477,7 +479,7 @@ export default function Home() {
           </div>
 
           <p className="text-center text-gray-600 mb-8">
-            Looking for service in another area? <Link href="/contact" className="text-red-600 font-semibold hover:text-red-700">Contact us</Link> – we may be able to help or recommend a trusted partner in your location.
+            Looking for service in another area? <Link href="/contact" className="text-red-600 font-semibold hover:text-red-700">Get in touch</Link> – we may be able to help or recommend a trusted partner in your location.
           </p>
 
           <div className="text-center">
@@ -505,7 +507,7 @@ export default function Home() {
               href="/contact"
               className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors text-center"
             >
-              Contact Us Now
+              Request Service Today
             </Link>
             <a
               href="tel:+447487616462"

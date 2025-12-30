@@ -168,6 +168,8 @@ export default function HeroSlideshow() {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-label="Previous"
+                role="img"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
               </svg>
@@ -193,6 +195,8 @@ export default function HeroSlideshow() {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-label="Next"
+                role="img"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>
@@ -242,7 +246,7 @@ export default function HeroSlideshow() {
             className="absolute top-4 right-4 md:top-8 md:right-8 text-white hover:text-red-400 transition-all duration-300 p-2 hover:bg-white/10 rounded-full"
             aria-label="Close lightbox"
           >
-            <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-label="Close" role="img">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -276,7 +280,7 @@ export default function HeroSlideshow() {
               className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-20 text-white hover:text-red-400 transition-all duration-300 p-2 hover:scale-125"
               aria-label="Previous slide in lightbox"
             >
-              <svg className="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-label="Previous slide" role="img">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
@@ -290,7 +294,7 @@ export default function HeroSlideshow() {
               className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-20 text-white hover:text-red-400 transition-all duration-300 p-2 hover:scale-125"
               aria-label="Next slide in lightbox"
             >
-              <svg className="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-10 h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-label="Next slide" role="img">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
