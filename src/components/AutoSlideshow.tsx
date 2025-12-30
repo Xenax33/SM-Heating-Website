@@ -77,6 +77,9 @@ export default function AutoSlideshow() {
               className="object-cover"
               priority={index === 0}
               sizes="100vw"
+              onError={(e) => {
+                e.currentTarget.src = '/404.jpg';
+              }}
             />
             
             {/* Premium Dark Gradient Overlay */}

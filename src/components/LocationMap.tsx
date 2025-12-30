@@ -48,7 +48,7 @@ export default function LocationMap() {
 
         // Add marker for the business location
         // 16 Duncansby Road, Glasgow G33 4QX - approximate coordinates
-        const marker = L.marker([55.85821, -4.14222], {
+        const marker = L.marker([55.856479205013734, -4.149371813436323], {
           icon: L.icon({
             iconUrl: '/logo2.png',
             iconSize: [40, 40],

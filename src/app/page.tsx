@@ -1,13 +1,9 @@
-import type { Metadata } from 'next';
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import HeroSlideshow from '@/components/HeroSlideshow';
 import LocationMap from '@/components/LocationMap';
-
-export const metadata: Metadata = {
-  title: 'SM Heating & Plumbing | Gas Safe Engineers Glasgow',
-  description: 'Expert Gas Safe registered boiler installation, repair, and servicing across Glasgow. 24/7 emergency support for heating and plumbing issues.',
-};
 
 export default function Home() {
   const placeholderImage = '/images/testimonials/placeholder.svg';
@@ -237,6 +233,9 @@ export default function Home() {
                   width={400}
                   height={350}
                   className="w-full h-80 object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = '/404.jpg';
+                  }}
                 />
                 
                 {/* Gradient overlays */}
@@ -352,6 +351,9 @@ export default function Home() {
                       width={64}
                       height={64}
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = '/404.jpg';
+                      }}
                     />
                   </div>
                   <div className="ml-4 flex-1">
@@ -426,7 +428,7 @@ export default function Home() {
                   </div>
                 </div>
                 <a
-                  href="https://www.google.com/maps/search/16+Duncansby+Road+Glasgow+G33+4QX"
+                  href="https://www.google.com/maps/dir/?api=1&destination=55.856479205013734,-4.149371813436323"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 inline-block bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl"

@@ -1,12 +1,9 @@
-import type { Metadata } from 'next';
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import AutoSlideshow from '@/components/AutoSlideshow';
 
-export const metadata: Metadata = {
-  title: 'About SM Heating & Plumbing | Gas Safe Glasgow Experts',
-  description: 'Trusted local heating and plumbing experts with over 15 years of experience. Gas Safe registered engineers serving Glasgow.',
-};
 
 export default function About() {
   const placeholderImage = '/images/testimonials/placeholder.svg';
@@ -189,6 +186,9 @@ export default function About() {
                   width={300}
                   height={300}
                   className="object-contain"
+                  onError={(e) => {
+                    e.currentTarget.src = '/404.jpg';
+                  }}
                 />
                 <p className="text-center text-sm text-gray-600 mt-4">
                   Certified and trusted by Gas Safe Register
@@ -277,6 +277,9 @@ export default function About() {
                       width={64}
                       height={64}
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = '/404.jpg';
+                      }}
                     />
                   </div>
                   <div className="ml-4">

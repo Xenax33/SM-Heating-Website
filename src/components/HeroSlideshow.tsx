@@ -133,6 +133,9 @@ export default function HeroSlideshow() {
                 className="object-cover cursor-pointer transition-transform duration-700 group-hover:scale-110"
                 priority={index === 0}
                 sizes="100vw"
+                onError={(e) => {
+                  e.currentTarget.src = '/404.jpg';
+                }}
                 onClick={(e) => {
                   e.stopPropagation();
                   setLightboxOpen(true);
@@ -258,6 +261,9 @@ export default function HeroSlideshow() {
                 fill
                 className="object-contain pointer-events-none"
                 sizes="100vw"
+                onError={(e) => {
+                  e.currentTarget.src = '/404.jpg';
+                }}
               />
             </div>
 

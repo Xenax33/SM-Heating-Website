@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -17,6 +19,9 @@ export default function Footer() {
                 width={32}
                 height={32}
                 className="h-8 w-auto"
+                onError={(e) => {
+                  e.currentTarget.src = '/404.jpg';
+                }}
               />
               <span className="font-bold text-lg text-gray-800">SM Heating & Plumbing</span>
             </div>

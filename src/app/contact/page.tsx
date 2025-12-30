@@ -135,7 +135,7 @@ export default function Contact() {
               Located in the heart of Glasgow, we're easily accessible and ready to serve your heating and plumbing needs.
             </p>
             <a
-              href="https://www.google.com/maps/search/16+Duncansby+Road+Glasgow+G33+4QX"
+              href="https://www.google.com/maps/dir/?api=1&destination=55.856479205013734,-4.149371813436323"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-red-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-700 transition-colors"

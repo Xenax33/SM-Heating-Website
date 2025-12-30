@@ -26,6 +26,9 @@ export default function Header() {
               width={40}
               height={40}
               className="h-10 w-auto"
+              onError={(e) => {
+                e.currentTarget.src = '/404.jpg';
+              }}
             />
             <span className="hidden sm:block font-bold text-lg text-gray-800">
               SM Heating & Plumbing
