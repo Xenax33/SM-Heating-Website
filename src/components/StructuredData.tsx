@@ -43,6 +43,16 @@ export default function StructuredData() {
             'closes': '16:00',
           },
         ],
+        'geo': {
+          '@type': 'GeoCoordinates',
+          'latitude': '55.856479205013734',
+          'longitude': '-4.149371813436323',
+        },
+        'aggregateRating': {
+          '@type': 'AggregateRating',
+          'ratingValue': '5',
+          'reviewCount': '6',
+        },
         'sameAs': [],
       },
       {
