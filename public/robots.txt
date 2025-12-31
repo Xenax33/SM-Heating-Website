@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://smheatingandplumbing.co.uk/sitemap.xml
+Sitemap: https://www.smheatingplumbing.co.uk/sitemap.xml

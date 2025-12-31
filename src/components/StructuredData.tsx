@@ -4,11 +4,11 @@ export default function StructuredData() {
     '@graph': [
       {
         '@type': 'LocalBusiness',
-        '@id': 'https://smheatingandplumbing.co.uk',
+        '@id': 'https://www.smheatingplumbing.co.uk',
         'name': 'SM Heating & Plumbing',
         'description': 'Professional Gas Safe registered boiler, heating, and plumbing services across Glasgow and surrounding areas',
-        'url': 'https://smheatingandplumbing.co.uk',
-        'image': 'https://smheatingandplumbing.co.uk/images/gas-safe-register.jpeg',
+        'url': 'https://www.smheatingplumbing.co.uk',
+        'image': 'https://www.smheatingplumbing.co.uk/images/gas-safe-register.jpeg',
         'telephone': '+44-7487-616462',
         'email': 'info@smheating.co.uk',
         'address': {
@@ -47,10 +47,10 @@ export default function StructuredData() {
       },
       {
         '@type': 'Organization',
-        '@id': 'https://smheatingandplumbing.co.uk',
+        '@id': 'https://www.smheatingplumbing.co.uk',
         'name': 'SM Heating & Plumbing',
-        'url': 'https://smheatingandplumbing.co.uk',
-        'logo': 'https://smheatingandplumbing.co.uk/logo.png',
+        'url': 'https://www.smheatingplumbing.co.uk',
+        'logo': 'https://www.smheatingplumbing.co.uk/logo.png',
         'description': 'Professional Gas Safe registered heating and plumbing services',
       },
       {
@@ -59,7 +59,7 @@ export default function StructuredData() {
         'description': 'Expert installation of new boiler systems tailored to your home',
         'provider': {
           '@type': 'LocalBusiness',
-          '@id': 'https://smheatingandplumbing.co.uk',
+          '@id': 'https://www.smheatingplumbing.co.uk',
         },
       },
       {
@@ -68,7 +68,7 @@ export default function StructuredData() {
         'description': 'Fast and reliable repair services for all boiler types',
         'provider': {
           '@type': 'LocalBusiness',
-          '@id': 'https://smheatingandplumbing.co.uk',
+          '@id': 'https://www.smheatingplumbing.co.uk',
         },
       },
       {
@@ -77,7 +77,7 @@ export default function StructuredData() {
         'description': 'Complete central heating maintenance and installation',
         'provider': {
           '@type': 'LocalBusiness',
-          '@id': 'https://smheatingandplumbing.co.uk',
+          '@id': 'https://www.smheatingplumbing.co.uk',
         },
       },
       {
@@ -86,7 +86,7 @@ export default function StructuredData() {
         'description': '24/7 emergency call-out service for urgent heating and plumbing issues',
         'provider': {
           '@type': 'LocalBusiness',
-          '@id': 'https://smheatingandplumbing.co.uk',
+          '@id': 'https://www.smheatingplumbing.co.uk',
         },
       },
     ],

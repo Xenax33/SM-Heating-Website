@@ -312,7 +312,7 @@ export default function About() {
               <p className="text-lg text-gray-700">Homes Served</p>
             </div>
             <div>
-              <p className="text-5xl font-bold text-red-600 mb-2">10000+</p>
+              <p className="text-5xl font-bold text-red-600 mb-2">5000</p>
               <p className="text-lg text-gray-700">Jobs Completed</p>
             </div>
             <div>

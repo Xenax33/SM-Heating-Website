@@ -6,6 +6,9 @@ import LocationMap from '@/components/LocationMap';
 export const metadata: Metadata = {
   title: 'Contact SM Heating & Plumbing Glasgow | 24/7 Emergency',
   description: 'Contact SM Heating & Plumbing for a free quote. Gas Safe registered engineers available 24/7 for emergency heating.',
+  alternates: {
+    canonical: 'https://www.smheatingplumbing.co.uk/contact',
+  },
 };
 
 export default function Contact() {

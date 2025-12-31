@@ -21,11 +21,15 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.smheatingplumbing.co.uk'),
   title: "SM Heating & Plumbing | Gas Safe Engineers Glasgow",
   description: "Expert Gas Safe registered boiler installation, repair, and servicing across Glasgow. 24/7 emergency support available.",
   keywords: "boiler installation, boiler repair, heating services, plumbing, emergency repair, Glasgow, Gas Safe registered, central heating, plumbing services",
   authors: [{ name: "SM Heating & Plumbing" }],
   robots: "index, follow",
+  alternates: {
+    canonical: 'https://www.smheatingplumbing.co.uk',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -39,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://smheatingandplumbing.co.uk",
+    url: "https://www.smheatingplumbing.co.uk",
     title: "SM Heating & Plumbing | Gas Safe Engineers Glasgow",
     description: "Professional boiler installation, repair, and servicing. Gas Safe registered engineers. Available 24/7.",
     siteName: "SM Heating & Plumbing",
