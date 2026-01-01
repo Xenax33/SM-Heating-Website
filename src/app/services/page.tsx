@@ -110,6 +110,29 @@ export default function Services() {
         </div>
       </section>
 
+      {/* No Call Out Charges Section */}
+      <section className="bg-blue-50 py-12 border-b-2 border-blue-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+            <div className="flex-shrink-0">
+              <div className="bg-white rounded-lg p-6 shadow-md">
+                <div className="text-6xl text-blue-600 text-center">
+                  💷
+                </div>
+              </div>
+            </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">No Call Out Charges in Glasgow</h3>
+              <p className="text-gray-600 max-w-md">
+                We're committed to excellent customer service and don't charge call out fees. 
+                If we visit your home and can't fix the issue, there's no charge to you. 
+                We believe in earning your trust through quality work, not upfront fees.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
