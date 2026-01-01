@@ -124,9 +124,8 @@ export default function Services() {
             <div className="text-center md:text-left">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">No Call Out Charges in Glasgow</h3>
               <p className="text-gray-600 max-w-md">
-                We're committed to excellent customer service and don't charge call out fees. 
-                If we visit your home and can't fix the issue, there's no charge to you. 
-                We believe in earning your trust through quality work, not upfront fees.
+                We believe in transparent, fair pricing for all our customers. That's why we don't charge call out fees when we visit your home for assessments or quotes. 
+                You only pay when we complete the work to your satisfaction - it's that simple.
               </p>
             </div>
           </div>
