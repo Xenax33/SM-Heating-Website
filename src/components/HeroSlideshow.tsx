@@ -13,31 +13,31 @@ export default function HeroSlideshow() {
   const slides = [
     {
       image: '/images/slideshow/6.jpg',
-      alt: '',
+      alt: 'Professional boiler and heating system installation by Gas Safe registered engineers in Glasgow',
     },
     {
       image: '/images/slideshow/2.jpeg',
-      alt: '',
+      alt: 'Expert plumbing services and repairs by certified plumbers in Glasgow',
     },
     {
       image: '/images/slideshow/3.jpeg',
-      alt: '',
+      alt: 'Boiler repair and maintenance services by SM Heating & Plumbing in Glasgow',
     },
     {
       image: '/images/slideshow/4.jpeg',
-      alt: '',
+      alt: 'Central heating system installation and maintenance in Glasgow homes',
     },
     {
       image: '/images/slideshow/5.jpeg',
-      alt: '',
+      alt: 'Certified heating engineer working on boiler installation in Glasgow',
     },
     {
       image: '/images/slideshow/1.jpeg',
-      alt: '',
+      alt: 'Professional boiler installation service by SM Heating & Plumbing in Glasgow',
     },
     {
       image: '/images/slideshow/7.jpeg',
-      alt: '',
+      alt: 'Complete heating system setup and configuration by expert engineers in Glasgow',
     },
   ];
 

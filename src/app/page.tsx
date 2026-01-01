@@ -184,9 +184,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="flex-shrink-0">
               <div className="bg-white rounded-lg p-4 shadow-md">
-                <Image
+                  <Image
                   src="/images/gas-safe-register.jpeg"
-                  alt="Gas Safe Register Certification"
+                  alt="Gas Safe Register certification badge for SM Heating & Plumbing - Certified Gas Safe registered engineers in Glasgow"
                   width={100}
                   height={100}
                   className="object-contain"
@@ -231,7 +231,7 @@ export default function Home() {
                 {/* Image with overlay */}
                 <Image
                   src={service.image}
-                  alt={service.title}
+                  alt={`${service.title} service in Glasgow - ${service.description}`}
                   width={400}
                   height={350}
                   className="w-full h-80 object-cover"
@@ -266,7 +266,7 @@ export default function Home() {
                       href="/services"
                       className="inline-flex items-center text-red-400 hover:text-red-300 font-semibold text-sm transition-colors"
                     >
-                      Service Details
+                      Learn more about {service.title} in Glasgow
                       <span className="ml-2">→</span>
                     </Link>
                   </div>
@@ -349,7 +349,7 @@ export default function Home() {
                   <div className="w-16 h-16 bg-gradient-to-br from-red-100 to-blue-100 rounded-full flex items-center justify-center border-2 border-red-200 overflow-hidden group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                     <Image
                       src={testimonial.image || placeholderImage}
-                      alt={testimonial.name}
+                      alt={`Customer testimonial photo - ${testimonial.name}, ${testimonial.location}`}
                       width={64}
                       height={64}
                       className="w-full h-full object-cover"
@@ -378,7 +378,7 @@ export default function Home() {
               href="/about"
               className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl"
             >
-              Read More Reviews
+              Read more customer reviews for SM Heating & Plumbing Glasgow
             </Link>
           </div>
         </div>

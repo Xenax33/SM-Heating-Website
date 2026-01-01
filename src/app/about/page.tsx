@@ -182,7 +182,7 @@ export default function About() {
               <div className="bg-white rounded-lg p-8 shadow-lg border border-green-100 hover:shadow-xl transition-shadow">
                 <Image
                   src="/images/gas-safe-register.jpeg"
-                  alt="Gas Safe Register Certification"
+                  alt="Gas Safe Register certification badge - SM Heating & Plumbing is a fully certified Gas Safe registered company in Glasgow"
                   width={300}
                   height={300}
                   className="object-contain"
@@ -273,7 +273,7 @@ export default function About() {
                   <div className="w-16 h-16 bg-gradient-to-br from-red-100 to-blue-100 rounded-full flex items-center justify-center border-2 border-red-200 overflow-hidden group-hover:scale-110 transition-transform duration-300">
                     <Image
                       src={testimonial.image || placeholderImage}
-                      alt={testimonial.name}
+                      alt={`Customer review from ${testimonial.name} in ${testimonial.location} - 5 star rating for SM Heating & Plumbing`}
                       width={64}
                       height={64}
                       className="w-full h-full object-cover"

@@ -127,7 +127,7 @@ export default function Services() {
                     <div className="relative h-96 bg-gray-100">
                       <Image
                         src={service.image}
-                        alt={service.title}
+                        alt={`Professional ${service.title.toLowerCase()} service in Glasgow by Gas Safe registered engineers`}
                         width={500}
                         height={400}
                         className="object-cover w-full h-full image-hover"
